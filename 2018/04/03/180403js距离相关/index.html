@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>JS距离相关的属性 | SP Blog | blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="JS基础语法">
+    <meta name="description" content="理解不够，先上张图来凑js中获取各种宽度和距离，常常让我们混淆，各种浏览器的不兼容让我们很头疼，现在就在说说js中有哪些宽度和距离。 名词解释 screen：屏幕。这一类取到的是关于屏幕的宽度和距离，与浏览器无关，应该是获取window对象的属性。client：使用区、客户区。指的是客户区，当然是指浏览器区域。offset：偏移。指的是目标甲相对目标乙的距离。scroll：卷轴、卷动。指的是包含滚">
+<meta name="keywords" content="JS基础语法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JS距离相关的属性">
+<meta property="og:url" content="http://yoursite.com/2018/04/03/180403js距离相关/index.html">
+<meta property="og:site_name" content="SP Blog">
+<meta property="og:description" content="理解不够，先上张图来凑js中获取各种宽度和距离，常常让我们混淆，各种浏览器的不兼容让我们很头疼，现在就在说说js中有哪些宽度和距离。 名词解释 screen：屏幕。这一类取到的是关于屏幕的宽度和距离，与浏览器无关，应该是获取window对象的属性。client：使用区、客户区。指的是客户区，当然是指浏览器区域。offset：偏移。指的是目标甲相对目标乙的距离。scroll：卷轴、卷动。指的是包含滚">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://yoursite.com/assets/blog/blog180403/img1_180403.jpg">
+<meta property="og:image" content="http://yoursite.com/assets/blog/blog180403/img2_180403.jpg">
+<meta property="og:image" content="http://yoursite.com/assets/blog/blog180403/img3_180403.jpg">
+<meta property="og:image" content="http://yoursite.com/assets/blog/blog180403/img4_180403.jpg">
+<meta property="og:updated_time" content="2018-04-03T11:08:40.589Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JS距离相关的属性">
+<meta name="twitter:description" content="理解不够，先上张图来凑js中获取各种宽度和距离，常常让我们混淆，各种浏览器的不兼容让我们很头疼，现在就在说说js中有哪些宽度和距离。 名词解释 screen：屏幕。这一类取到的是关于屏幕的宽度和距离，与浏览器无关，应该是获取window对象的属性。client：使用区、客户区。指的是客户区，当然是指浏览器区域。offset：偏移。指的是目标甲相对目标乙的距离。scroll：卷轴、卷动。指的是包含滚">
+<meta name="twitter:image" content="http://yoursite.com/assets/blog/blog180403/img1_180403.jpg">
+    
+        <link rel="alternate" type="application/atom+xml" title="SP Blog" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/assets/sp.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">宋鹏</h5>
+          <a href="mailto:songpengzq@163.com" title="songpengzq@163.com" class="mail">songpengzq@163.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                heme
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/gogHeroDream/" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://weibo.com/u/6608486266" target="_blank" >
+                <i class="icon icon-lg icon-weibo"></i>
+                Weibo
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/custom"  >
+                <i class="icon icon-lg icon-link"></i>
+                测试
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">JS距离相关的属性</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">JS距离相关的属性</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-04-03T09:03:38.000Z" itemprop="datePublished" class="page-time">
+  2018-04-03
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#理解不够，先上张图来凑"><span class="post-toc-number">1.</span> <span class="post-toc-text">理解不够，先上张图来凑</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#名词解释"><span class="post-toc-number">2.</span> <span class="post-toc-text">名词解释</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#window"><span class="post-toc-number">3.</span> <span class="post-toc-text">window</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-window-innerWidth-innerHeight"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">1.window.innerWidth/innerHeight</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-window-outerWidth-outerHeight"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">2.window.outerWidth/outerHeight</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-window-screenLeft-screenTop"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">3.window.screenLeft/screenTop</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-window-screenX-screenY"><span class="post-toc-number">3.4.</span> <span class="post-toc-text">4.window.screenX/screenY</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5-window-pageXOffset-pageYOffset"><span class="post-toc-number">3.5.</span> <span class="post-toc-text">5.window.pageXOffset/pageYOffset</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-window-scrollX-scrollY"><span class="post-toc-number">3.6.</span> <span class="post-toc-text">6.window.scrollX/scrollY</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#screen"><span class="post-toc-number">4.</span> <span class="post-toc-text">screen</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-screen-width-height"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">1.screen.width/height</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-screen-availWidth-availHeight"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">2.screen.availWidth/availHeight</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#element"><span class="post-toc-number">5.</span> <span class="post-toc-text">element</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-elment-clientWidth-clientHeight"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">1.elment.clientWidth/clientHeight</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-element-clientLeft-clientTop"><span class="post-toc-number">5.2.</span> <span class="post-toc-text">2.element.clientLeft/clientTop</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-element-offsetWidth-offsetHeight"><span class="post-toc-number">5.3.</span> <span class="post-toc-text">3.element.offsetWidth/offsetHeight</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-element-offsetLeft-offsetTop"><span class="post-toc-number">5.4.</span> <span class="post-toc-text">4.element.offsetLeft/offsetTop</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5-element-scrollWidth-scrollHeight"><span class="post-toc-number">5.5.</span> <span class="post-toc-text">5.element.scrollWidth/scrollHeight</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-element-scrollLeft-scrollTop"><span class="post-toc-number">5.6.</span> <span class="post-toc-text">6.element.scrollLeft/scrollTop</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#总结"><span class="post-toc-number">6.</span> <span class="post-toc-text">总结</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-180403js距离相关"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">JS距离相关的属性</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018-04-03 17:03:38" datetime="2018-04-03T09:03:38.000Z"  itemprop="datePublished">2018-04-03</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h2 id="理解不够，先上张图来凑"><a href="#理解不够，先上张图来凑" class="headerlink" title="理解不够，先上张图来凑"></a>理解不够，先上张图来凑</h2><p>js中获取各种宽度和距离，常常让我们混淆，各种浏览器的不兼容让我们很头疼，现在就在说说js中有哪些宽度和距离。<br><img src="/assets/blog/blog180403/img1_180403.jpg" alt="属性图解"></p>
+<h2 id="名词解释"><a href="#名词解释" class="headerlink" title="名词解释"></a>名词解释</h2><blockquote>
+<p>screen：屏幕。这一类取到的是关于屏幕的宽度和距离，与浏览器无关，应该是获取window对象的属性。<br>client：使用区、客户区。指的是客户区，当然是指浏览器区域。<br>offset：偏移。指的是目标甲相对目标乙的距离。<br>scroll：卷轴、卷动。指的是包含滚动条的的属性。<br>inner：内部。指的是内部部分，不含滚动条。<br>avail：可用的。可用区域，不含滚动条，易与inner混淆。</p>
+</blockquote>
+<h2 id="window"><a href="#window" class="headerlink" title="window"></a>window</h2><h3 id="1-window-innerWidth-innerHeight"><a href="#1-window-innerWidth-innerHeight" class="headerlink" title="1.window.innerWidth/innerHeight"></a>1.window.innerWidth/innerHeight</h3><p>描述：浏览器可见区域的内宽度、高度（不含浏览器的边框，但包含滚动条）。<br>兼容：ie9/10、chrome、firefox。<br>示例（缩放浏览器的宽度为1000px，高度为500px）：</p>
+<blockquote>
+<p>alert(window.innerWidth);<br>// chrome/firefox/ie9/10=&gt;1000<br>// ie6/7/8=&gt;undefined<br>alert(window.innerHeight);<br>// chrome/firefox/ie9/10=&gt;500<br>// ie6/7/8=&gt;undefined</p>
+</blockquote>
+<h3 id="2-window-outerWidth-outerHeight"><a href="#2-window-outerWidth-outerHeight" class="headerlink" title="2.window.outerWidth/outerHeight"></a>2.window.outerWidth/outerHeight</h3><p>描述：浏览器外宽度（包含浏览器的边框，因各个浏览器的边框边一样，得到的值也是不一样的）。<br>兼容：ie9/10、chrome、firefox。<br>示例（缩放浏览器的宽度为1000px，高度为500px）：</p>
+<blockquote>
+<p>alert(window.outerWidth);<br>// chrome/firefox/ie9/10=&gt;1002<br>// ie6/7/8=&gt;undefined<br>alert(window.outerHeight);<br>// chrome/firefox/ie9/10=&gt;502<br>// ie6/7/8=&gt;undefined</p>
+</blockquote>
+<p>注意：没有window.width属性。</p>
+<h3 id="3-window-screenLeft-screenTop"><a href="#3-window-screenLeft-screenTop" class="headerlink" title="3.window.screenLeft/screenTop"></a>3.window.screenLeft/screenTop</h3><p>描述：浏览器的位移，表示：<br>ie浏览器的内边缘距离屏幕边缘的距离。<br>chrome浏览器的外边缘距离屏幕边缘的距离。<br>如图：<br><img src="/assets/blog/blog180403/img2_180403.jpg" alt="属性图解2"><br>兼容：ie6/7/8/9/10、chrome。<br>示例：</p>
+<blockquote>
+<p>alert(window.screenLeft);<br>// ie=&gt;87<br>// chrome=&gt;86<br>// firefox=&gt;undefined<br>alert(window.screenTop);<br>// ie=&gt;87<br>// chrome=&gt;86<br>// firefox=&gt;undefined</p>
+</blockquote>
+<h3 id="4-window-screenX-screenY"><a href="#4-window-screenX-screenY" class="headerlink" title="4.window.screenX/screenY"></a>4.window.screenX/screenY</h3><p>描述：浏览器的位移，表示：<br>ie9/10浏览器的外边缘距离屏幕边缘的距离。<br>chrome浏览器的外边缘距离屏幕边缘的距离。<br>由此可知，chrome的screenLeft和screenX是相等的（其目的是为了兼容ie和firefox，两个属性都兼备了，但更趋向于firefox，chrome的这种做法不止这一处，还有很多，其实这种做法便于开发者移植，但对开发者的开发过程产生了一定的混淆），ie9/10的screenLeft是大于screenX的.<br>兼容：ie9/10、chrome、firefox。<br>示例：</p>
+<blockquote>
+<p>alert(window.screenX);<br>// chrome/firefox=&gt;86<br>// ie9/10=&gt;79<br>// ie6/7/8=&gt;undefined</p>
+<p>alert(window.screenY);<br>// chrome/firefox=&gt;86<br>// ie9/10=&gt;79<br>// ie6/7/8=&gt;undefined</p>
+</blockquote>
+<h3 id="5-window-pageXOffset-pageYOffset"><a href="#5-window-pageXOffset-pageYOffset" class="headerlink" title="5.window.pageXOffset/pageYOffset"></a>5.window.pageXOffset/pageYOffset</h3><p>描述：表示浏览器X轴（水平）、Y轴（垂直）滚动条的偏移距离。<br>兼容：ie9/10、chrome、firefox。<br>示例：</p>
+<blockquote>
+<p>document.onclick=function(){<br>   alert(window.pageXOffset);<br>   // chrome=&gt;200<br>   // firefox=&gt;200<br>   // ie9/10=&gt;200<br>   // ie6/7/8=&gt;undefined<br>   alert(window.pageYOffset);<br>   // chrome=&gt;200<br>   // firefox=&gt;200<br>   // ie9/10=&gt;200<br>   // ie6/7/8=&gt;undefined<br>};</p>
+</blockquote>
+<h3 id="6-window-scrollX-scrollY"><a href="#6-window-scrollX-scrollY" class="headerlink" title="6.window.scrollX/scrollY"></a>6.window.scrollX/scrollY</h3><p>描述：表示浏览器X轴（水平）、Y轴（垂直）滚动条的偏移距离。由此可知，在chrome和firefox中window.pageXOffset和window.scrollX是相等的，具体为什么会出现两个相等的属性值，不得而知。<br>兼容：chrome、firefox。<br>示例：</p>
+<blockquote>
+<p>document.onclick=function(){<br>   alert(window.scrollX);<br>   // chrome=&gt;200<br>   // firefox=&gt;200<br>   // ie6/7/8/9/10=&gt;undefined</p>
+<p>   alert(window.scrollY);<br>   // chrome=&gt;200<br>   // firefox=&gt;200<br>   // ie6/7/8/9/10=&gt;undefined<br>};</p>
+</blockquote>
+<h2 id="screen"><a href="#screen" class="headerlink" title="screen"></a>screen</h2><h3 id="1-screen-width-height"><a href="#1-screen-width-height" class="headerlink" title="1.screen.width/height"></a>1.screen.width/height</h3><p>描述：屏幕的宽度、高度（指的是屏幕的分辨率，单位为像素）。<br>兼容性：ie6/7/8/9/10、chrome、firefox。<br>示例（屏幕的分辨率为1440×900）：</p>
+<blockquote>
+<p>alert(screen.width);<br>// chrome/firefox/ie6/7/8/9/10=&gt;1440<br>alert(screen.height);<br>// chrome/firefox/ie6/7/8/9/10=&gt;900</p>
+</blockquote>
+<p>注意：此处必须是screen.width，而不是screenWidth，与接下来要说的各种宽度有所区别。</p>
+<h3 id="2-screen-availWidth-availHeight"><a href="#2-screen-availWidth-availHeight" class="headerlink" title="2.screen.availWidth/availHeight"></a>2.screen.availWidth/availHeight</h3><p>描述：屏幕的可用宽度、高度（通常与屏幕的宽度、高度一致）。<br>兼容性：ie6/7/8/9/10、chrome、firefox。<br>示例：</p>
+<blockquote>
+<p>alert(screen.availWidth);<br>// chrome/firefox/ie6/7/8/9/10=&gt;1440<br>alert(screen.availHeight);<br>// chrome/firefox/ie6/7/8/9/10=&gt;900</p>
+</blockquote>
+<h2 id="element"><a href="#element" class="headerlink" title="element"></a>element</h2><p>元素的宽度、位移、距离以元素的盒模型为content-box为例。即：</p>
+<blockquote>
+<p>box-sizing: content-box;<br>其他盒模型计算会有差异，请勿对号入座。</p>
+</blockquote>
+<h3 id="1-elment-clientWidth-clientHeight"><a href="#1-elment-clientWidth-clientHeight" class="headerlink" title="1.elment.clientWidth/clientHeight"></a>1.elment.clientWidth/clientHeight</h3><p>描述：计算如下，</p>
+<blockquote>
+<p>有滚动条时：clientWidth=元素左内边距宽度+元素宽度+元素右内边距宽度-元素垂直滚动条宽度<br>无滚动条时：clientWidth=元素左内边距宽度+元素宽度+元素右内边距宽度</p>
+</blockquote>
+<p>使用该特性可以计算出的滚动条宽度（即设置元素的内容宽度超过元素宽度，然后分别设置是否超过隐藏，两次的clientWidth差值就是滚动条的宽度）。<br>兼容：chrome、firefox、ie6/7/8/9/10。<br>示例（宽度和高度都为100px，边框为50px，内边距为60px，外边距为70px，左、上位移为80px，滚动条的宽度因系统不同而不同）：<br><img src="/assets/blog/blog180403/img3_180403.jpg" alt="属性图解3"></p>
+<blockquote>
+<p>// 有滚动条=&gt;paddingLeftWidth+width+paddingRightWidth-scrollYWidth<br>// 无滚动条=&gt;paddingLeftWidth+width+paddingRightWidth<br>alert(oDemo.clientWidth);<br>// 有滚动条=&gt;60+100+60-17=203<br>// 无滚动条=&gt;60+100+60=220<br>// 有滚动条=&gt;paddingTopWidth+height+paddingBottomWidth-scrollYHeight<br>// 无滚动条=&gt;paddingTopWidth+height+paddingBottomWidth<br>alert(oDemo.clientHeight);<br>// 有滚动条=&gt;60+100+60-17=203<br>// 无滚动条=&gt;60+100+60=220</p>
+</blockquote>
+<h3 id="2-element-clientLeft-clientTop"><a href="#2-element-clientLeft-clientTop" class="headerlink" title="2.element.clientLeft/clientTop"></a>2.element.clientLeft/clientTop</h3><p>描述：clientLeft为左边框宽度，clientTop为上边框宽度。<br>兼容：chrome、firefox、ie6/7/8/9/10。<br>示例（宽度和高度都为100px，边框为50px，内边距为60px，外边距为70px，左、上位移为80px，滚动条的宽度因系统不同而不同）：<br><img src="/assets/blog/blog180403/img4_180403.jpg" alt="属性图解4"></p>
+<blockquote>
+<p>// borderLeftWidth<br>alert(oDemo.clientLeft);<br>// =&gt;50</p>
+<p>// borderTopWidth<br>alert(oDemo.clientTop);<br>// =&gt;50</p>
+</blockquote>
+<h3 id="3-element-offsetWidth-offsetHeight"><a href="#3-element-offsetWidth-offsetHeight" class="headerlink" title="3.element.offsetWidth/offsetHeight"></a>3.element.offsetWidth/offsetHeight</h3><p>描述：offsetWidth=元素左边框宽度+元素左内边距宽度+元素宽度+元素右内边距宽度+元素右边框宽度。<br>兼容：chrome、firefox、ie6/7/8/9/10。<br>示例（宽度和高度都为100px，边框为50px，内边距为60px，外边距为70px，左、上位移为80px，滚动条的宽度因系统不同而不同）：</p>
+<blockquote>
+<p>// borderLeftWidth+paddingLeftWidth+width+paddingRightWidth+borderRightWidth<br>alert(oDemo.offsetWidth);<br>// =&gt;50+60+100+60+50=320</p>
+<p>// borderTopWidth+paddingLeftWidth+width+paddingRightWidth+borderRightWidth<br>alert(oDemo.offsetWidth);<br>// =&gt;50+60+100+60+50=320</p>
+</blockquote>
+<h3 id="4-element-offsetLeft-offsetTop"><a href="#4-element-offsetLeft-offsetTop" class="headerlink" title="4.element.offsetLeft/offsetTop"></a>4.element.offsetLeft/offsetTop</h3><p>描述：表示该元素相对于最近的定位祖先元素的距离，<br>chrome：offsetLeft=定位祖先左边框宽度+定位祖先元素左内边距宽度+左位移+左外边距宽度<br>ie6/7/8/9/10、firefox：offsetLeft=定位祖先元素左内边距宽度+左位移+左外边距宽度。<br>chrome比其他浏览器多计算了定位祖先元素的边框。offsetTop同理。<br>兼容：chrome、firefox、ie6/7/8/9/10。<br>示例（宽度和高度都为100px，边框为50px，内边距为60px，外边距为70px，左、上位移为80px，滚动条的宽度因系统不同而不同）：</p>
+<blockquote>
+<p>// 以最近的定位祖先元素为准<br>// 谷歌=&gt;parentBorderLeftWidth+parentPaddingLeftWidth+left+marginLeft<br>// 其他=&gt;parentPaddingLeftWidth+left+marginLeft<br>alert(oDemo.offsetLeft);<br>// chrome=&gt;20+10+80+70=180<br>// ie6/7/8/9/10/firefox=&gt;160</p>
+<p>// 以最近的定位祖先元素为准<br>// 谷歌=&gt;parentBorderTopWidth+parentPaddingTopWidth+left+marginLeft<br>// 其他=&gt;parentBorderTopWidth+left+marginLeft<br>alert(oDemo.offsetLeft);<br>// chrome=&gt;20+10+80+70=180<br>// ie6/7/8/9/10/firefox=&gt;160</p>
+</blockquote>
+<h3 id="5-element-scrollWidth-scrollHeight"><a href="#5-element-scrollWidth-scrollHeight" class="headerlink" title="5.element.scrollWidth/scrollHeight"></a>5.element.scrollWidth/scrollHeight</h3><p>描述：计算方法如，<br>有滚动条时：</p>
+<blockquote>
+<p>chrome、firefox、ie8/9/10：左内边距宽度+内容宽度。<br>ie6/7：左内边距宽度+内容宽度+右内边距宽度（是由CSS的BUG引起）。<br>无滚动条时：左内边距宽度+宽度+右内边距宽度。</p>
+</blockquote>
+<p>兼容：chrome、firefox、ie8/9/10、ie6/7（半兼容）。<br>示例（宽度和高度都为100px，边框为50px，内边距为60px，外边距为70px，左、上位移为80px，滚动条的宽度因系统不同而不同，内容宽度和高度都为200px）：</p>
+<blockquote>
+<p>// 有滚动条=paddingLeftWidth+contentWidth<br>// 有滚动条(ie6/7)=paddingLeftWidth+contentWidth+paddingRightWidth<br>// 无滚动条=paddingLeftWidth+width+paddingRightWidth<br>alert(oDemo.scrollWidth);<br>// 有滚动条=&gt;200+60=260<br>// 有滚动条(ie6/7)=&gt;200+60+60=320<br>// 无滚动条=&gt;100+60+60=220</p>
+<p>// 有滚动条=paddingTopWidth+contentWidth<br>// 有滚动条(ie6/7)=paddingTopWidth+contentWidth+paddingBottomWidth<br>// 无滚动条=paddingTopWidth+width+paddingBottomWidth<br>alert(oDemo.scrollHeight);<br>// 有滚动条=&gt;60+200=260<br>// 有滚动条(ie6/7)=&gt;60+200+60=320<br>// 无滚动条=&gt;60+100+60=220</p>
+</blockquote>
+<h3 id="6-element-scrollLeft-scrollTop"><a href="#6-element-scrollLeft-scrollTop" class="headerlink" title="6.element.scrollLeft/scrollTop"></a>6.element.scrollLeft/scrollTop</h3><p>描述：获得水平、垂直滚动条的距离。<br>兼容：chrome、firefox、ie6/7/8/9/10。<br>示例（宽度和高度都为100px，边框为50px，内边距为60px，外边距为70px，左、上位移为80px，滚动条的宽度因系统不同而不同）：</p>
+<blockquote>
+<p>document.onclick=function(){<br>   // 水平滚动条左距离<br>   alert(oDemo.scrollLeft);</p>
+<p>   // 垂直滚动条上距离<br>   alert(oDemo.scrollTop);<br>}</p>
+</blockquote>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>因为document.documentElement就是浏览器的html标签，所以获取浏览器的相关属性，也可以用该对象来获取。<br>屏幕宽度：window.screen.width。<br>浏览器内宽度：window.innerWidth || document.documentElement.clientWidth。<br>元素内容宽度：element.clientWidth。<br>元素占位宽度：element.offsetWidth。<br>元素相对位置：无。<br>原文来自:<a href="http://caibaojian.com/js-name.html" target="_blank" rel="noopener">http://caibaojian.com/js-name.html</a></p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2018-04-03T11:08:40.589Z" itemprop="dateUpdated">2018-04-03 19:08:40</time>
+</span><br>
+
+
+        
+        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/2018/04/03/180403js距离相关/" target="_blank" rel="external">http://yoursite.com/2018/04/03/180403js距离相关/</a>
+        
+    </div>
+    
+    <footer>
+        <a href="http://yoursite.com">
+            <img src="/assets/sp.jpg" alt="宋鹏">
+            宋鹏
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS基础语法/">JS基础语法</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/04/03/180403js距离相关/&title=《JS距离相关的属性》 — SP Blog&pic=http://yoursite.com/assets/sp.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/04/03/180403js距离相关/&title=《JS距离相关的属性》 — SP Blog&source=这是我的个人博客，日常开发经验与学习心得放置的小站" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/04/03/180403js距离相关/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《JS距离相关的属性》 — SP Blog&url=http://yoursite.com/2018/04/03/180403js距离相关/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/04/03/180403js距离相关/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2018/07/20/hello-world/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">Hello World</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2018/03/25/180325markdown/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">markdown语法</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'false' == 'true',
+            verify: 'false' == 'true',
+            appId: "TW6jIKxmYOWjuPou2gmENagA-gzGzoHsz",
+            appKey: "QoCatQkEXwLlfkKQ310J8M8Y",
+            avatar: "mm",
+            placeholder: "Just go go",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+    </script>
+    <!-- Valine Comments end -->
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>宋鹏 &copy; 2017 - 2018</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/04/03/180403js距离相关/&title=《JS距离相关的属性》 — SP Blog&pic=http://yoursite.com/assets/sp.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/04/03/180403js距离相关/&title=《JS距离相关的属性》 — SP Blog&source=这是我的个人博客，日常开发经验与学习心得放置的小站" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/04/03/180403js距离相关/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《JS距离相关的属性》 — SP Blog&url=http://yoursite.com/2018/04/03/180403js距离相关/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/04/03/180403js距离相关/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACGElEQVR42u3aQW7DMAwEwP7/0+mlhwJFlCVpF7A0OgWpTWtSgKZEfX3F4/Vr9L7/+zmPdtnAwMB4LOO1HJMHvIuQjHxuGBgY5zCSSaxDr++qpuN8bhgYGBjvromSYDFprnkYGBgYPca7ia6nVY2MgYGBkS8mqwvXfFq9pS8GBsY5jN7G2f98vqW/gYGB8ShGb7O+t9C9o3nwcy8GBsbWjGq5tt4mmxSRvfIRAwPjBEbvOFe1VXBVzPK6GQMDYwvG5LBF3sicxEmux8DAOJmRp+DyI1tNglGFi4GB8VhGfjwrgVWPf+XPiv4PGBgYmzKqG2FX7fBNWgUX9F0xMDAey8gvzUvJHqCafDEwMPZm9Iq8dWGXfzNP9BgYGCcwegvXeZOg2gYovBgwMDCOYVRHtSjM03e+VMbAwNiV0QuXl315yZhH+FDhYmBgbM2YHM+qbsblxV8UDQMDY2vGVVtmCSxZ0PYaDxgYGKcxqlMvJMQY1rsSAwPjNEa+rJ0Uizkjuh4DA+MARrlZWGx8Jim1GgcDA+M0RjVQb+RbaeUNOwwMjE0Z1x6qSO69ZRsOAwNja8ZViXJeGiZvhupmHwYGxk6M6gGLXkF5d2sTAwPjBEa+6s0fkAPyN8CHOhcDAwMj/muefCcNTgwMDIxqaTgpLvOfoNmJxcDA2IJRbQb0SslJCYiBgXEyY3RSo1jGJT/TZCYYGBjbMb4BoYzbGX0pmucAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+lazyScripts.push('//s95.cnzz.com/z_stat.php?id=1274241848&web_id=1274241848')
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
