@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>git 相关一 / sell命令 | SP Blog | 秋名山车神，火速超车中···</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="语法,git">
+    <meta name="description" content="git 系列一命令行概述 dos （windows） shell （Linux）：bash csh ksh  常用命令 pwd (Print Working Directory) 查看当前目录 cd (Change Directory) 切换目录，如 cd /etc ls (List) 查看当前目录下内容，如 ls -al mkdir (Make Directory) 创建目录，如 mkdir b">
+<meta name="keywords" content="语法,git">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git 相关一 &#x2F; sell命令">
+<meta property="og:url" content="http://spzhanqi.top/2018/07/22/180722git1/index.html">
+<meta property="og:site_name" content="SP Blog">
+<meta property="og:description" content="git 系列一命令行概述 dos （windows） shell （Linux）：bash csh ksh  常用命令 pwd (Print Working Directory) 查看当前目录 cd (Change Directory) 切换目录，如 cd /etc ls (List) 查看当前目录下内容，如 ls -al mkdir (Make Directory) 创建目录，如 mkdir b">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://spzhanqi.top/2018/07/22/180722git1/img/git1.jpg">
+<meta property="og:image" content="http://spzhanqi.top/2018/07/22/180722git1/img/area.jpg">
+<meta property="og:updated_time" content="2018-07-22T09:27:46.432Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="git 相关一 &#x2F; sell命令">
+<meta name="twitter:description" content="git 系列一命令行概述 dos （windows） shell （Linux）：bash csh ksh  常用命令 pwd (Print Working Directory) 查看当前目录 cd (Change Directory) 切换目录，如 cd /etc ls (List) 查看当前目录下内容，如 ls -al mkdir (Make Directory) 创建目录，如 mkdir b">
+<meta name="twitter:image" content="http://spzhanqi.top/2018/07/22/180722git1/img/git1.jpg">
+    
+        <link rel="alternate" type="application/atom+xml" title="SP Blog" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/assets/sp.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">宋鹏</h5>
+          <a href="mailto:songpengzq@163.com" title="songpengzq@163.com" class="mail">songpengzq@163.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                heme
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/gogHeroDream/" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://weibo.com/u/6608486266" target="_blank" >
+                <i class="icon icon-lg icon-weibo"></i>
+                Weibo
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/custom"  >
+                <i class="icon icon-lg icon-link"></i>
+                test
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">git 相关一 / sell命令</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">git 相关一 / sell命令</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-07-22T09:03:38.000Z" itemprop="datePublished" class="page-time">
+  2018-07-22
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#git-系列一"><span class="post-toc-number">1.</span> <span class="post-toc-text">git 系列一</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#命令行概述"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">命令行概述</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#常用命令"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">常用命令</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#vi编辑器"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">vi编辑器</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#vi编辑器的三种模式"><span class="post-toc-number">1.3.1.</span> <span class="post-toc-text">vi编辑器的三种模式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#vi常用操作"><span class="post-toc-number">1.3.2.</span> <span class="post-toc-text">vi常用操作</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#版本控制概述"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">版本控制概述</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#git环境安装"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">git环境安装</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#git工作原理"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">git工作原理</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#git的三个工作区域"><span class="post-toc-number">1.6.1.</span> <span class="post-toc-text">git的三个工作区域</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#git管理文件的4中状态"><span class="post-toc-number">1.6.2.</span> <span class="post-toc-text">git管理文件的4中状态</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#git工作流程-本地创建仓库"><span class="post-toc-number">1.7.</span> <span class="post-toc-text">git工作流程-本地创建仓库</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#git分支操作"><span class="post-toc-number">1.8.</span> <span class="post-toc-text">git分支操作</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#分支概述"><span class="post-toc-number">1.8.1.</span> <span class="post-toc-text">分支概述</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#分支操作"><span class="post-toc-number">1.8.2.</span> <span class="post-toc-text">分支操作</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Git命令"><span class="post-toc-number">1.9.</span> <span class="post-toc-text">Git命令</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-180722git1"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">git 相关一 / sell命令</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018-07-22 17:03:38" datetime="2018-07-22T09:03:38.000Z"  itemprop="datePublished">2018-07-22</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="git-系列一"><a href="#git-系列一" class="headerlink" title="git 系列一"></a>git 系列一</h1><h2 id="命令行概述"><a href="#命令行概述" class="headerlink" title="命令行概述"></a>命令行概述</h2><ul>
+<li>dos （windows）</li>
+<li>shell （Linux）：bash csh ksh</li>
+</ul>
+<h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><ul>
+<li>pwd (Print Working Directory) 查看当前目录</li>
+<li>cd (Change Directory) 切换目录，如 cd /etc</li>
+<li>ls (List) 查看当前目录下内容，如 ls -al</li>
+<li>mkdir (Make Directory) 创建目录，如 mkdir blog</li>
+<li>touch 创建文件，如 touch index.html</li>
+<li>cat 查看文件全部内容，如 cat index.html</li>
+<li>less 查看文件，如more /etc/passwd、less /etc/passwd</li>
+<li>rm (remove) 删除文件，如 rm index.html、rm -rf  blog</li>
+<li>rmdir (Remove Directory) 删除文件夹，只能删除空文件夹，不常用</li>
+<li>mv (move) 移动文件或重命名，如 mv index.html ./demo/index.html</li>
+<li>cp (copy) 复制文件，cp index.html ./demo/index.html</li>
+<li>tab 自动补全，连按两次会将所有匹配内容显示出来</li>
+<li>> 和 &gt;&gt;重定向，如echo hello world! &gt; README.md，&gt;覆盖 &gt;&gt;追加</li>
+<li>| 管道符可以将多个命令连接使用，上一次（命令）的执行结果当成下一次（命令）的参数。</li>
+<li>grep 匹配内容，一般结合管道符使用</li>
+</ul>
+<h2 id="vi编辑器"><a href="#vi编辑器" class="headerlink" title="vi编辑器"></a>vi编辑器</h2><blockquote>
+<p>linux操作系统标配，相当于windows下的记事本。</p>
+</blockquote>
+<h3 id="vi编辑器的三种模式"><a href="#vi编辑器的三种模式" class="headerlink" title="vi编辑器的三种模式"></a>vi编辑器的三种模式</h3><blockquote>
+<p>vi编辑器提供了3种模式，分别是命令模式、插入模式、底行模式，每种模式下用户所能进行的操作是不一样的。</p>
+</blockquote>
+<ul>
+<li>3种模式的切换如下图所示：</li>
+</ul>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="img/git1.jpg" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<h3 id="vi常用操作"><a href="#vi常用操作" class="headerlink" title="vi常用操作"></a>vi常用操作</h3><ul>
+<li>a) 打开/创建文件， vi 文件路径</li>
+<li>b) 底行模式 :w保存，:w filenme另存为</li>
+<li>c) 底行模式 :q退出</li>
+<li>d) 底行模式 :wq保存并退出</li>
+<li>e) 底行模式 :e! 撤销更改，返回到上一次保存的状态</li>
+<li>f) 底行模式 :q! 不保存强制退出</li>
+<li>g) 底行模式 :set nu 设置行号</li>
+<li>h) 命令模式 ZZ（大写）保存并退出</li>
+<li>i) 命令模式 u辙销操作，可多次使用</li>
+<li>j) 命令模式 dd删除当前行</li>
+<li>k) 命令模式 yy复制当前行</li>
+<li>l) 命令模式 p 粘贴内容</li>
+<li>m) 命令模式 ctrl+f向前翻页</li>
+<li>n) 命令模式 ctrl+b向后翻页</li>
+<li>o) 命令模式 i进入编辑模式，当前光标处插入</li>
+<li>p) 命令模式 a进入编辑模式，当前光标后插入</li>
+<li>q) 命令模式 A进入编辑模式，光标移动到行尾</li>
+<li>r) 命令模式 o进入编辑模式，当前行下面插入新行</li>
+<li>s) 命令模式 O进入编辑模式，当前行上面插入新行</li>
+</ul>
+<h2 id="版本控制概述"><a href="#版本控制概述" class="headerlink" title="版本控制概述"></a>版本控制概述</h2><ul>
+<li>本地版本控制</li>
+<li>集中版本控制</li>
+<li>分布式版本控制</li>
+</ul>
+<h2 id="git环境安装"><a href="#git环境安装" class="headerlink" title="git环境安装"></a>git环境安装</h2><ul>
+<li>window安装<ul>
+<li><a href="http://git-scm.com/download/win" target="_blank" rel="noopener">下载地址</a>，下载后和普通软件安装方式一样</li>
+</ul>
+</li>
+<li>linux安装<ul>
+<li>CentOS发行版：sudo yum install git</li>
+<li>Ubuntu发行版：sudo apt-get install git</li>
+</ul>
+</li>
+<li>Mac安装<ul>
+<li>打开Terminal直接输入git命令，会自动提示，按提示引导安装即可</li>
+</ul>
+</li>
+</ul>
+<h2 id="git工作原理"><a href="#git工作原理" class="headerlink" title="git工作原理"></a>git工作原理</h2><h3 id="git的三个工作区域"><a href="#git的三个工作区域" class="headerlink" title="git的三个工作区域"></a>git的三个工作区域</h3><ul>
+<li>工作目录</li>
+<li>暂存区域</li>
+<li>本地仓库</li>
+</ul>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="img/area.jpg" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<h3 id="git管理文件的4中状态"><a href="#git管理文件的4中状态" class="headerlink" title="git管理文件的4中状态"></a>git管理文件的4中状态</h3><ul>
+<li>未追踪untraced</li>
+<li>已暂存staged</li>
+<li>已提交commited</li>
+<li>已修改modified</li>
+</ul>
+<h2 id="git工作流程-本地创建仓库"><a href="#git工作流程-本地创建仓库" class="headerlink" title="git工作流程-本地创建仓库"></a>git工作流程-本地创建仓库</h2><ol>
+<li>配置用户信息</li>
+<li>初始化仓库</li>
+<li>添加文件到暂存区</li>
+<li>提交文件</li>
+<li>查看文件状态</li>
+<li>查看提交历史</li>
+<li>撤销文件修改</li>
+<li>恢复版本</li>
+</ol>
+<h2 id="git分支操作"><a href="#git分支操作" class="headerlink" title="git分支操作"></a>git分支操作</h2><h3 id="分支概述"><a href="#分支概述" class="headerlink" title="分支概述"></a>分支概述</h3><h3 id="分支操作"><a href="#分支操作" class="headerlink" title="分支操作"></a>分支操作</h3><ol>
+<li>创建分支</li>
+<li>切换分支</li>
+<li>合并分支</li>
+<li>删除分支</li>
+</ol>
+<h2 id="Git命令"><a href="#Git命令" class="headerlink" title="Git命令"></a>Git命令</h2><ul>
+<li>配置用户信息<ul>
+<li>全局配置，软件安装目录C:\Program Files\Git\mingw64\etc\gitconfig</li>
+<li>用户配置，用户名目录C:\Users\www.gitconfig</li>
+<li>项目配置，项目目录</li>
+<li>git config –global user.name zhangsan</li>
+<li>git config –global user.email “<a href="mailto:zhangsan@163.com" target="_blank" rel="noopener">zhangsan@163.com</a>“</li>
+</ul>
+</li>
+<li>查看文件状态<ul>
+<li>git status</li>
+</ul>
+</li>
+<li>查看提交记录(按q键退出)<ul>
+<li>git log</li>
+</ul>
+</li>
+<li>工作区添加到暂存区<ul>
+<li>git add</li>
+</ul>
+</li>
+<li>暂存区覆盖工作区内容<ul>
+<li>git checkout</li>
+</ul>
+</li>
+<li>暂存区提交到本地仓库<ul>
+<li>git commit -m ‘bug fixed’</li>
+</ul>
+</li>
+<li>回滚特定版本<ul>
+<li>git reset –hard <commit></commit></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2018-07-22T09:27:46.432Z" itemprop="dateUpdated">2018-07-22 17:27:46</time>
+</span><br>
+
+
+        
+        丘山积卑而为高,江河合水而为大。原始链接：<a href="/2018/07/22/180722git1/" target="_blank" rel="external">http://spzhanqi.top/2018/07/22/180722git1/</a>
+        
+    </div>
+    
+    <footer>
+        <a href="http://spzhanqi.top">
+            <img src="/assets/sp.jpg" alt="宋鹏">
+            宋鹏
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/语法/">语法</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://spzhanqi.top/2018/07/22/180722git1/&title=《git 相关一 / sell命令》 — SP Blog&pic=http://spzhanqi.top/assets/sp.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://spzhanqi.top/2018/07/22/180722git1/&title=《git 相关一 / sell命令》 — SP Blog&source=这是我的个人博客，日常开发经验与学习心得放置的小站" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://spzhanqi.top/2018/07/22/180722git1/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《git 相关一 / sell命令》 — SP Blog&url=http://spzhanqi.top/2018/07/22/180722git1/&via=http://spzhanqi.top" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://spzhanqi.top/2018/07/22/180722git1/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2018/07/22/180722git2/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">git 相关二 / git基础命令</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'false' == 'true',
+            verify: 'false' == 'true',
+            appId: "TW6jIKxmYOWjuPou2gmENagA-gzGzoHsz",
+            appKey: "QoCatQkEXwLlfkKQ310J8M8Y",
+            avatar: "mm",
+            placeholder: "Just go go",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+    </script>
+    <!-- Valine Comments end -->
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢您的支持~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>宋鹏 &copy; 2017 - 2018</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://spzhanqi.top/2018/07/22/180722git1/&title=《git 相关一 / sell命令》 — SP Blog&pic=http://spzhanqi.top/assets/sp.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://spzhanqi.top/2018/07/22/180722git1/&title=《git 相关一 / sell命令》 — SP Blog&source=这是我的个人博客，日常开发经验与学习心得放置的小站" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://spzhanqi.top/2018/07/22/180722git1/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《git 相关一 / sell命令》 — SP Blog&url=http://spzhanqi.top/2018/07/22/180722git1/&via=http://spzhanqi.top" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://spzhanqi.top/2018/07/22/180722git1/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABx0lEQVR42u3aS27DMAwFwNz/0inQrSH7UbRkBxitCqdRRl4Q/Ojzidf3f1X/Pq7jp58VCxcXt839nq4jZfRktOf5k9yAi4u7n5sEr7ljjJ6c7zN8jouL+zJuErD6qRIuLu5vcefSoP7rwMXFfYpbbWScpzJzu91cq+Hi4ja46xqmc2nNY/1dXFzcIHzkASX5z/MEKPp1XFzcLdzqmCQvfjop0UWYw8XF3cjtBLVk6DI3oC3Xari4uG1uXpbMhaH8Slb0OnBxcR/lltOORhulcDBcXNwXcKvFz12dz+Erw8XF3chNSpE9ga9QpeHi4m7kVpuh1UZJ/uTiTLi4uMu4/a37303SnYsSCBcX91ZuPgKJzj2VvhRSJVxc3Ie4VXq/eZoPWnBxcfdw7y1OkisX1U+HAxVcXNxl3LypkVyrygct+f64uLhPcfOvVZutky3RuZkwLi7urdxq+7LaBEmCVGGIgouLu5hbDSh5CzVpqnbCKC4u7mpueSobFEIJPTnwRRcHFxd3MTe/AdVpi9yQyuDi4r6M29mhGsiGO+Pi4r6e27naNVk44eLibuTObZQXMA+0RXBxcbc3TKtpSlIIFRIdXFzcVdw/tkPdRFEoQPEAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+lazyScripts.push('//s95.cnzz.com/z_stat.php?id=1274241848&web_id=1274241848')
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '快点回来探讨技术啊！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '数据装载中!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>

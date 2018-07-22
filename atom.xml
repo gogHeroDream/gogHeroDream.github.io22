@@ -2,12 +2,12 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>SP Blog</title>
   <icon>https://www.gravatar.com/avatar/28587295d610488886c736989d92a9d1</icon>
-  <subtitle>blog</subtitle>
+  <subtitle>秋名山车神，火速超车中···</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
-  <updated>2017-12-12T11:29:05.440Z</updated>
-  <id>http://yoursite.com/</id>
+  <link href="http://spzhanqi.top/"/>
+  <updated>2018-07-22T09:27:46.432Z</updated>
+  <id>http://spzhanqi.top/</id>
   
   <author>
     <name>宋鹏</name>
@@ -17,51 +17,134 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
-    <link href="http://yoursite.com/2018/07/20/markdown%E8%AF%AD%E6%B3%95/"/>
-    <id>http://yoursite.com/2018/07/20/markdown语法/</id>
-    <published>2018-07-20T09:55:44.027Z</published>
-    <updated>2017-12-12T11:29:05.440Z</updated>
+    <title>git 相关一 / sell命令</title>
+    <link href="http://spzhanqi.top/2018/07/22/180722git1/"/>
+    <id>http://spzhanqi.top/2018/07/22/180722git1/</id>
+    <published>2018-07-22T09:03:38.000Z</published>
+    <updated>2018-07-22T09:27:46.432Z</updated>
     
-    <content type="html"><![CDATA[<p>参考网址：<a href="http://wowubuntu.com/markdown/" target="_blank" rel="noopener">http://wowubuntu.com/markdown/</a><br>1、标题<br>Markdown 支持两种标题的语法，类 Setext 和类 atx 形式。<br>①atx 形式 #与文字中间要有空格</p><h1 id="一级标题-二级标题-三级标题-四级标题-五级标题-六级标题"><a href="#一级标题-二级标题-三级标题-四级标题-五级标题-六级标题" class="headerlink" title="一级标题 ## 二级标题 ### 三级标题 #### 四级标题 ##### 五级标题 ###### 六级标题"></a>一级标题 ## 二级标题 ### 三级标题 #### 四级标题 ##### 五级标题 ###### 六级标题</h1><p>②Setext 形式 用底线的形式，任何数量的 = 和 - 都可以有效果。<br>2、图片<br>！<a href="图片链接地址">提示的文字</a><br>3、链接（两种）<br>①内联：  <a href="链接地址">显示的文字</a>；<br>②引用方式：</p><p>4、换行<br>两个以上的空格然后回车<br>5、代码引用<br>如果引用的语句只有一段，不分行，可以用 <code>将语句包起来。如</code>code<code>;如果引用的语句为多行，可以将``</code>置于这段代码的首行和末行。或者四个空格或一个制表符<br>6、列表</p><p>7、引用</p><blockquote><p>和文本之间要保留一个字符的空格。<br>8、分割线<br>可以在一行中用三个以上的星号、减号、底线来建立一个分隔线，行内不能有其他东西。你也可以在星号或是减号中间插入空格。<br>9、字体属性<br>通过闭合标签font，属性face为字体类型，color为字体颜色，size为字体大小</p></blockquote><font face="STCAIYUN">我是华文彩云</font><br><font color="gray" size="5">color=gray</font><br><font color="#0099ff" size="5" face="黑体">color=#0099ff size=5 face=”黑体”</font>]]></content>
+    <content type="html"><![CDATA[<h1 id="git-系列一"><a href="#git-系列一" class="headerlink" title="git 系列一"></a>git 系列一</h1><h2 id="命令行概述"><a href="#命令行概述" class="headerlink" title="命令行概述"></a>命令行概述</h2><ul><li>dos （windows）</li><li>shell （Linux）：bash csh ksh</li></ul><h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><ul><li>pwd (Print Working Directory) 查看当前目录</li><li>cd (Change Directory) 切换目录，如 cd /etc</li><li>ls (List) 查看当前目录下内容，如 ls -al</li><li>mkdir (Make Directory) 创建目录，如 mkdir blog</li><li>touch 创建文件，如 touch index.html</li><li>cat 查看文件全部内容，如 cat index.html</li><li>less 查看文件，如more /etc/passwd、less /etc/passwd</li><li>rm (remove) 删除文件，如 rm index.html、rm -rf  blog</li><li>rmdir (Remove Directory) 删除文件夹，只能删除空文件夹，不常用</li><li>mv (move) 移动文件或重命名，如 mv index.html ./demo/index.html</li><li>cp (copy) 复制文件，cp index.html ./demo/index.html</li><li>tab 自动补全，连按两次会将所有匹配内容显示出来</li><li>> 和 &gt;&gt;重定向，如echo hello world! &gt; README.md，&gt;覆盖 &gt;&gt;追加</li><li>| 管道符可以将多个命令连接使用，上一次（命令）的执行结果当成下一次（命令）的参数。</li><li>grep 匹配内容，一般结合管道符使用</li></ul><h2 id="vi编辑器"><a href="#vi编辑器" class="headerlink" title="vi编辑器"></a>vi编辑器</h2><blockquote><p>linux操作系统标配，相当于windows下的记事本。</p></blockquote><h3 id="vi编辑器的三种模式"><a href="#vi编辑器的三种模式" class="headerlink" title="vi编辑器的三种模式"></a>vi编辑器的三种模式</h3><blockquote><p>vi编辑器提供了3种模式，分别是命令模式、插入模式、底行模式，每种模式下用户所能进行的操作是不一样的。</p></blockquote><ul><li>3种模式的切换如下图所示：</li></ul><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="img/git1.jpg" alt="" title="">                </div>                <div class="image-caption"></div>            </figure><h3 id="vi常用操作"><a href="#vi常用操作" class="headerlink" title="vi常用操作"></a>vi常用操作</h3><ul><li>a) 打开/创建文件， vi 文件路径</li><li>b) 底行模式 :w保存，:w filenme另存为</li><li>c) 底行模式 :q退出</li><li>d) 底行模式 :wq保存并退出</li><li>e) 底行模式 :e! 撤销更改，返回到上一次保存的状态</li><li>f) 底行模式 :q! 不保存强制退出</li><li>g) 底行模式 :set nu 设置行号</li><li>h) 命令模式 ZZ（大写）保存并退出</li><li>i) 命令模式 u辙销操作，可多次使用</li><li>j) 命令模式 dd删除当前行</li><li>k) 命令模式 yy复制当前行</li><li>l) 命令模式 p 粘贴内容</li><li>m) 命令模式 ctrl+f向前翻页</li><li>n) 命令模式 ctrl+b向后翻页</li><li>o) 命令模式 i进入编辑模式，当前光标处插入</li><li>p) 命令模式 a进入编辑模式，当前光标后插入</li><li>q) 命令模式 A进入编辑模式，光标移动到行尾</li><li>r) 命令模式 o进入编辑模式，当前行下面插入新行</li><li>s) 命令模式 O进入编辑模式，当前行上面插入新行</li></ul><h2 id="版本控制概述"><a href="#版本控制概述" class="headerlink" title="版本控制概述"></a>版本控制概述</h2><ul><li>本地版本控制</li><li>集中版本控制</li><li>分布式版本控制</li></ul><h2 id="git环境安装"><a href="#git环境安装" class="headerlink" title="git环境安装"></a>git环境安装</h2><ul><li>window安装<ul><li><a href="http://git-scm.com/download/win" target="_blank" rel="noopener">下载地址</a>，下载后和普通软件安装方式一样</li></ul></li><li>linux安装<ul><li>CentOS发行版：sudo yum install git</li><li>Ubuntu发行版：sudo apt-get install git</li></ul></li><li>Mac安装<ul><li>打开Terminal直接输入git命令，会自动提示，按提示引导安装即可</li></ul></li></ul><h2 id="git工作原理"><a href="#git工作原理" class="headerlink" title="git工作原理"></a>git工作原理</h2><h3 id="git的三个工作区域"><a href="#git的三个工作区域" class="headerlink" title="git的三个工作区域"></a>git的三个工作区域</h3><ul><li>工作目录</li><li>暂存区域</li><li>本地仓库</li></ul><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="img/area.jpg" alt="" title="">                </div>                <div class="image-caption"></div>            </figure><h3 id="git管理文件的4中状态"><a href="#git管理文件的4中状态" class="headerlink" title="git管理文件的4中状态"></a>git管理文件的4中状态</h3><ul><li>未追踪untraced</li><li>已暂存staged</li><li>已提交commited</li><li>已修改modified</li></ul><h2 id="git工作流程-本地创建仓库"><a href="#git工作流程-本地创建仓库" class="headerlink" title="git工作流程-本地创建仓库"></a>git工作流程-本地创建仓库</h2><ol><li>配置用户信息</li><li>初始化仓库</li><li>添加文件到暂存区</li><li>提交文件</li><li>查看文件状态</li><li>查看提交历史</li><li>撤销文件修改</li><li>恢复版本</li></ol><h2 id="git分支操作"><a href="#git分支操作" class="headerlink" title="git分支操作"></a>git分支操作</h2><h3 id="分支概述"><a href="#分支概述" class="headerlink" title="分支概述"></a>分支概述</h3><h3 id="分支操作"><a href="#分支操作" class="headerlink" title="分支操作"></a>分支操作</h3><ol><li>创建分支</li><li>切换分支</li><li>合并分支</li><li>删除分支</li></ol><h2 id="Git命令"><a href="#Git命令" class="headerlink" title="Git命令"></a>Git命令</h2><ul><li>配置用户信息<ul><li>全局配置，软件安装目录C:\Program Files\Git\mingw64\etc\gitconfig</li><li>用户配置，用户名目录C:\Users\www.gitconfig</li><li>项目配置，项目目录</li><li>git config –global user.name zhangsan</li><li>git config –global user.email “<a href="mailto:zhangsan@163.com" target="_blank" rel="noopener">zhangsan@163.com</a>“</li></ul></li><li>查看文件状态<ul><li>git status</li></ul></li><li>查看提交记录(按q键退出)<ul><li>git log</li></ul></li><li>工作区添加到暂存区<ul><li>git add</li></ul></li><li>暂存区覆盖工作区内容<ul><li>git checkout</li></ul></li><li>暂存区提交到本地仓库<ul><li>git commit -m ‘bug fixed’</li></ul></li><li>回滚特定版本<ul><li>git reset –hard <commit></commit></li></ul></li></ul>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;参考网址：&lt;a href=&quot;http://wowubuntu.com/markdown/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://wowubuntu.com/markdown/&lt;/a&gt;&lt;br&gt;1、标题&lt;br&gt;Markdown 支持两种标
+        &lt;h1 id=&quot;git-系列一&quot;&gt;&lt;a href=&quot;#git-系列一&quot; class=&quot;headerlink&quot; title=&quot;git 系列一&quot;&gt;&lt;/a&gt;git 系列一&lt;/h1&gt;&lt;h2 id=&quot;命令行概述&quot;&gt;&lt;a href=&quot;#命令行概述&quot; class=&quot;headerlink&quot; ti
       
     
     </summary>
     
+    
+      <category term="语法" scheme="http://spzhanqi.top/tags/%E8%AF%AD%E6%B3%95/"/>
+    
+      <category term="git" scheme="http://spzhanqi.top/tags/git/"/>
     
   </entry>
   
   <entry>
-    <title>Hello World</title>
-    <link href="http://yoursite.com/2018/07/20/hello-world/"/>
-    <id>http://yoursite.com/2018/07/20/hello-world/</id>
-    <published>2018-07-20T08:20:25.367Z</published>
-    <updated>2018-07-20T08:20:25.367Z</updated>
+    <title>git 相关二 / git基础命令</title>
+    <link href="http://spzhanqi.top/2018/07/22/180722git2/"/>
+    <id>http://spzhanqi.top/2018/07/22/180722git2/</id>
+    <published>2018-07-22T09:03:38.000Z</published>
+    <updated>2018-07-22T09:29:58.926Z</updated>
     
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    <content type="html"><![CDATA[<h1 id="git"><a href="#git" class="headerlink" title="git"></a>git</h1><h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><ul><li>配置用户信息<ul><li>git config –global user.name 用户名</li><li>git config –global user.email 邮箱</li></ul></li><li>初始化本地仓库<ul><li>git init</li></ul></li><li>初始化远程仓库<ul><li>git init –bare</li></ul></li><li>把工作目录文件添加到暂存区<ul><li>git add 文件列表</li><li>git add *</li></ul></li><li>把暂存区中文件添加到本地仓库<ul><li>git commit -m 备注信息</li><li>git commit -a -m 备注信息 （-a只能提交已修改的文件，不能提交未跟踪文件）</li></ul></li><li>add的逆操作<ul><li>git rm –cached 文件列表</li></ul></li><li>回滚修改的内容<ul><li>git checkout 文件列表</li><li>git checkout . (回滚所有的修改，慎重使用)</li></ul></li><li>使用本地仓库的快照进行回滚<ul><li>git reset<ul><li>–hard</li><li>–soft</li><li>–mixed (默认参数)</li></ul></li></ul><ul><li>回滚最后一次提交<ul><li>git reset –hard HEAD^</li></ul></li><li>回滚所有的工作目录和暂存区内容<ul><li>git reset –hard HEAD</li></ul></li></ul></li><li>克隆远程仓库的项目<ul><li>git clone 远程仓库地址 项目名称</li></ul></li><li>拉取远程的分支<ul><li>git pull 远程仓库地址 远程分支名称:本地分支名称</li></ul></li><li>推送分支到远程仓库<ul><li>git push 远程仓库地址 本地分支名称:远程分支名称</li></ul></li><li>添加远程仓库别名<ul><li>git remote add 别名 远程仓库地址</li></ul></li><li>删除远程仓库别名<ul><li>git remote remove 别名</li></ul></li><li>查看远程仓库别名的详细信息<ul><li>git remote show 别名</li></ul></li><li>查看所有别名<ul><li>git remote</li></ul></li></ul><h2 id="分支操作"><a href="#分支操作" class="headerlink" title="分支操作"></a>分支操作</h2><ul><li>创建分支<ul><li>git branch 分支名称</li></ul></li><li>切换分支<ul><li>git checkout 分支名称</li></ul></li><li>创建并切换分支<ul><li>git checkout -b 分支名称</li></ul></li><li>删除本地分支<ul><li>git branch -d 分支名称（如果没有被合并，无法删除）</li><li>git branch -D 分支名称（强制删除）</li></ul></li><li>查看本地分支<ul><li>git branch</li></ul></li><li>查看远程分支<ul><li>git branch -r</li></ul></li><li>查看所有分支<ul><li>git branch -a</li></ul></li><li>删除远程分支<ul><li>git push 远程仓库地址 :远程分支名称</li><li>git push 远程仓库地址 –delete 远程分支名称</li></ul></li><li>保存当前状态<ul><li>git stash</li></ul></li><li>恢复当前状态<ul><li>git stash pop</li></ul></li></ul>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+        &lt;h1 id=&quot;git&quot;&gt;&lt;a href=&quot;#git&quot; class=&quot;headerlink&quot; title=&quot;git&quot;&gt;&lt;/a&gt;git&lt;/h1&gt;&lt;h2 id=&quot;常用命令&quot;&gt;&lt;a href=&quot;#常用命令&quot; class=&quot;headerlink&quot; title=&quot;常用命令&quot;&gt;&lt;/a&gt;常用命
       
     
     </summary>
     
+    
+      <category term="语法" scheme="http://spzhanqi.top/tags/%E8%AF%AD%E6%B3%95/"/>
+    
+      <category term="git" scheme="http://spzhanqi.top/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>git 相关三 / 远程仓库相关</title>
+    <link href="http://spzhanqi.top/2018/07/22/180722git3/"/>
+    <id>http://spzhanqi.top/2018/07/22/180722git3/</id>
+    <published>2018-07-22T09:03:38.000Z</published>
+    <updated>2018-07-22T09:35:56.731Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="git-系列三"><a href="#git-系列三" class="headerlink" title="git-系列三"></a>git-系列三</h1><h2 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h2><h2 id="远程登录"><a href="#远程登录" class="headerlink" title="远程登录"></a>远程登录</h2><ul><li>telnet 一种不加密的通信协议</li><li>ssh 一种协议，用来实现两台计算机之间的通信（具体就是实现远程登录）<ul><li>使用密码登录<ul><li>首先客户端向服务器发送一个请求</li><li>服务器接收到请求之后向客户度发送自己的公钥</li><li>客户端接收到公钥之后存储到指定目录（C:\Users\www.ssh）</li><li>客户端输入密码然后用公钥加密，再次发送请求</li><li>服务器接收到密文之后，使用自己的私钥揭秘然后验证通过，从而允许客户端登录</li></ul></li><li>使用公钥和私钥登录<ul><li>客户端先生成自己的公钥和私钥（ssh-keygen -t rsa）</li><li>把客户端的公钥传递给服务器，服务器使用该公钥给客户端授权</li><li>客户端直接就可以免密登录了</li></ul></li></ul></li></ul><h2 id="远程（共享）仓库"><a href="#远程（共享）仓库" class="headerlink" title="远程（共享）仓库"></a>远程（共享）仓库</h2><blockquote><p>借助一个远程仓库，大家可以共享代码、历史版本等数据，实现团队成员之间代码同步。</p></blockquote><h2 id="远程仓库操作流程"><a href="#远程仓库操作流程" class="headerlink" title="远程仓库操作流程"></a>远程仓库操作流程</h2><h3 id="创建远程仓库"><a href="#创建远程仓库" class="headerlink" title="创建远程仓库"></a>创建远程仓库</h3><ol><li>创建以.git结尾的目录mkdir repo.git</li><li>进入该目录cd repo.git</li><li>初始化共享仓库git init –bare </li></ol><blockquote><p>这样我们就建好了一个共享的仓库，但这时这个仓库是一个空的仓库，并且不允在这个仓库中进行任何修改。</p></blockquote><h3 id="向共享仓库推送内容"><a href="#向共享仓库推送内容" class="headerlink" title="向共享仓库推送内容"></a>向共享仓库推送内容</h3><blockquote><p>将自已开发的项目同步到这个目录中，其它开发者就可以共享你开发的项目了。</p></blockquote><ol><li>进入自己的项目跟目录 cd demo</li><li>git push ../repo.git master</li></ol><blockquote><p>这样demo项目就进入到了共享仓库中</p></blockquote><h3 id="从共享仓库取出内容"><a href="#从共享仓库取出内容" class="headerlink" title="从共享仓库取出内容"></a>从共享仓库取出内容</h3><ol><li>新创建一个目录example（模拟另一个开发者）</li><li>进入该目录cd ./example</li><li>git clone repo.git</li></ol><p>通过repo.git共享仓库，我们轻松得到了一个demo的副本</p><h3 id="基于克隆下来的项目进行修改"><a href="#基于克隆下来的项目进行修改" class="headerlink" title="基于克隆下来的项目进行修改"></a>基于克隆下来的项目进行修改</h3><ul><li>修改内容</li><li>提交内容</li><li>推送内容</li></ul><blockquote><p>这样便实现了代码的共享，但是，我们发现我们这个共享的仓库只是放到了本地的，其它人是没有办法从我们这个共享仓库共享内容的！！！，那么要想实现共享，我们可以把这个共享的仓库放到一台远程服务器上，问题不就解决了吗？</p></blockquote><h2 id="远程仓库服务GitHub"><a href="#远程仓库服务GitHub" class="headerlink" title="远程仓库服务GitHub"></a>远程仓库服务GitHub</h2><blockquote><p>如果我们熟悉服务器的话，我们完全可以将上述的步骤在我们的远程服务器上进行操作，然后再做一些登录权限的设置，就可非常完美的搭建一个共享服务器了。其实为了更好的管理我们的仓库，一些第三方机构开发出了Web版仓库管理程序，通过Web界面形式管理仓库。</p></blockquote><h2 id="GitHub概述"><a href="#GitHub概述" class="headerlink" title="GitHub概述"></a>GitHub概述</h2><h2 id="GitHub基本使用"><a href="#GitHub基本使用" class="headerlink" title="GitHub基本使用"></a>GitHub基本使用</h2><ol><li>注册账号</li><li>创建共享仓库</li></ol><h2 id="GitHub地址格式"><a href="#GitHub地址格式" class="headerlink" title="GitHub地址格式"></a>GitHub地址格式</h2><ul><li>https://<ul><li>获取代码不需要密码</li><li>提交代码需要密码</li></ul></li><li>git@<ul><li>需要将自己的公钥添加到GitHub上</li><li>获取与提交代码都不需要密码</li></ul></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;git-系列三&quot;&gt;&lt;a href=&quot;#git-系列三&quot; class=&quot;headerlink&quot; title=&quot;git-系列三&quot;&gt;&lt;/a&gt;git-系列三&lt;/h1&gt;&lt;h2 id=&quot;分支&quot;&gt;&lt;a href=&quot;#分支&quot; class=&quot;headerlink&quot; title=&quot;分
+      
+    
+    </summary>
+    
+    
+      <category term="语法" scheme="http://spzhanqi.top/tags/%E8%AF%AD%E6%B3%95/"/>
+    
+      <category term="git" scheme="http://spzhanqi.top/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>git 相关四 / 远程仓库相关</title>
+    <link href="http://spzhanqi.top/2018/07/22/180722git4/"/>
+    <id>http://spzhanqi.top/2018/07/22/180722git4/</id>
+    <published>2018-07-22T09:03:38.000Z</published>
+    <updated>2018-07-22T09:36:35.823Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="git-系列四"><a href="#git-系列四" class="headerlink" title="git-系列四"></a>git-系列四</h1><h2 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h2><h2 id="远程登录"><a href="#远程登录" class="headerlink" title="远程登录"></a>远程登录</h2><ul><li>telnet 一种不加密的通信协议</li><li>ssh 一种协议，用来实现两台计算机之间的通信（具体就是实现远程登录）<ul><li>使用密码登录<ul><li>首先客户端向服务器发送一个请求</li><li>服务器接收到请求之后向客户度发送自己的公钥</li><li>客户端接收到公钥之后存储到指定目录（C:\Users\www.ssh）</li><li>客户端输入密码然后用公钥加密，再次发送请求</li><li>服务器接收到密文之后，使用自己的私钥揭秘然后验证通过，从而允许客户端登录</li></ul></li><li>使用公钥和私钥登录<ul><li>客户端先生成自己的公钥和私钥（ssh-keygen -t rsa）</li><li>把客户端的公钥传递给服务器，服务器使用该公钥给客户端授权</li><li>客户端直接就可以免密登录了</li></ul></li></ul></li></ul><h2 id="远程（共享）仓库"><a href="#远程（共享）仓库" class="headerlink" title="远程（共享）仓库"></a>远程（共享）仓库</h2><blockquote><p>借助一个远程仓库，大家可以共享代码、历史版本等数据，实现团队成员之间代码同步。</p></blockquote><h2 id="远程仓库操作流程"><a href="#远程仓库操作流程" class="headerlink" title="远程仓库操作流程"></a>远程仓库操作流程</h2><h3 id="创建远程仓库"><a href="#创建远程仓库" class="headerlink" title="创建远程仓库"></a>创建远程仓库</h3><ol><li>创建以.git结尾的目录mkdir repo.git</li><li>进入该目录cd repo.git</li><li>初始化共享仓库git init –bare </li></ol><blockquote><p>这样我们就建好了一个共享的仓库，但这时这个仓库是一个空的仓库，并且不允在这个仓库中进行任何修改。</p></blockquote><h3 id="向共享仓库推送内容"><a href="#向共享仓库推送内容" class="headerlink" title="向共享仓库推送内容"></a>向共享仓库推送内容</h3><blockquote><p>将自已开发的项目同步到这个目录中，其它开发者就可以共享你开发的项目了。</p></blockquote><ol><li>进入自己的项目跟目录 cd demo</li><li>git push ../repo.git master</li></ol><blockquote><p>这样demo项目就进入到了共享仓库中</p></blockquote><h3 id="从共享仓库取出内容"><a href="#从共享仓库取出内容" class="headerlink" title="从共享仓库取出内容"></a>从共享仓库取出内容</h3><ol><li>新创建一个目录example（模拟另一个开发者）</li><li>进入该目录cd ./example</li><li>git clone repo.git</li></ol><p>通过repo.git共享仓库，我们轻松得到了一个demo的副本</p><h3 id="基于克隆下来的项目进行修改"><a href="#基于克隆下来的项目进行修改" class="headerlink" title="基于克隆下来的项目进行修改"></a>基于克隆下来的项目进行修改</h3><ul><li>修改内容</li><li>提交内容</li><li>推送内容</li></ul><blockquote><p>这样便实现了代码的共享，但是，我们发现我们这个共享的仓库只是放到了本地的，其它人是没有办法从我们这个共享仓库共享内容的！！！，那么要想实现共享，我们可以把这个共享的仓库放到一台远程服务器上，问题不就解决了吗？</p></blockquote><h2 id="远程仓库服务GitHub"><a href="#远程仓库服务GitHub" class="headerlink" title="远程仓库服务GitHub"></a>远程仓库服务GitHub</h2><blockquote><p>如果我们熟悉服务器的话，我们完全可以将上述的步骤在我们的远程服务器上进行操作，然后再做一些登录权限的设置，就可非常完美的搭建一个共享服务器了。其实为了更好的管理我们的仓库，一些第三方机构开发出了Web版仓库管理程序，通过Web界面形式管理仓库。</p></blockquote><h2 id="GitHub概述"><a href="#GitHub概述" class="headerlink" title="GitHub概述"></a>GitHub概述</h2><h2 id="GitHub基本使用"><a href="#GitHub基本使用" class="headerlink" title="GitHub基本使用"></a>GitHub基本使用</h2><ol><li>注册账号</li><li>创建共享仓库</li></ol><h2 id="GitHub地址格式"><a href="#GitHub地址格式" class="headerlink" title="GitHub地址格式"></a>GitHub地址格式</h2><ul><li>https://<ul><li>获取代码不需要密码</li><li>提交代码需要密码</li></ul></li><li>git@<ul><li>需要将自己的公钥添加到GitHub上</li><li>获取与提交代码都不需要密码</li></ul></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;git-系列四&quot;&gt;&lt;a href=&quot;#git-系列四&quot; class=&quot;headerlink&quot; title=&quot;git-系列四&quot;&gt;&lt;/a&gt;git-系列四&lt;/h1&gt;&lt;h2 id=&quot;分支&quot;&gt;&lt;a href=&quot;#分支&quot; class=&quot;headerlink&quot; title=&quot;分
+      
+    
+    </summary>
+    
+    
+      <category term="语法" scheme="http://spzhanqi.top/tags/%E8%AF%AD%E6%B3%95/"/>
+    
+      <category term="git" scheme="http://spzhanqi.top/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>session and cookie</title>
+    <link href="http://spzhanqi.top/2018/07/22/180722session&amp;&amp;cookie/"/>
+    <id>http://spzhanqi.top/2018/07/22/180722session&amp;&amp;cookie/</id>
+    <published>2018-07-22T09:03:38.000Z</published>
+    <updated>2018-07-22T09:35:56.691Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Session-And-Cookie"><a href="#Session-And-Cookie" class="headerlink" title="Session And Cookie"></a>Session And Cookie</h1><h2 id="session和cookie分析"><a href="#session和cookie分析" class="headerlink" title="session和cookie分析"></a>session和cookie分析</h2><ul><li>http协议是无状态的</li><li>但是实际情况我们需要维护客户端和服务器之间的状态</li><li>可以通过cookie和session解决这个问题</li></ul><h3 id="cookie基本操作"><a href="#cookie基本操作" class="headerlink" title="cookie基本操作"></a>cookie基本操作</h3><ul><li>获取cookie</li><li>设置cookie</li><li>cookie分类<ul><li>会话cookie</li><li>持久cookie</li></ul></li><li>cookie常用属性<ul><li>expires 有效期</li><li>path cookie路径</li></ul></li><li>封装cookie操作方式<ul><li>设置cookie</li><li>获取cookie</li></ul></li><li>使用jQuery插件操作cookie<ul><li>获取所有cookie</li><li>获取指定cookie</li><li>设置cookie</li><li>删除cookie5</li></ul></li></ul><h3 id="session操作"><a href="#session操作" class="headerlink" title="session操作"></a>session操作</h3><ul><li>session是服务器端技术</li><li>session在开启的时候会生成一个唯一编号PHPSESSID</li><li>session里面可以存储数据（这些数据与PHPSESSID相关联）</li></ul><h3 id="cookie与session的关系"><a href="#cookie与session的关系" class="headerlink" title="cookie与session的关系"></a>cookie与session的关系</h3><ul><li>session可以借助cookie</li><li>但是cookie可以被浏览器禁用</li><li>可以通过别的办法解决：URL重写</li></ul><h2 id="模块化开发概念"><a href="#模块化开发概念" class="headerlink" title="模块化开发概念"></a>模块化开发概念</h2><ul><li>非模块化开发缺点<ul><li>命名冲突(EXTJS YUI EXJ.panel.abc())</li><li>文件依赖</li></ul></li><li>模板规范<ul><li>浏览器端模块化<ul><li>AMD — Require.js</li><li>CMD — Sea.js</li></ul></li><li>服务器端的模块化<ul><li>CommonJS — Node.js</li></ul></li></ul></li></ul><h2 id="requirejs基本使用"><a href="#requirejs基本使用" class="headerlink" title="requirejs基本使用"></a>requirejs基本使用</h2><h2 id="模块定义与加载"><a href="#模块定义与加载" class="headerlink" title="模块定义与加载"></a>模块定义与加载</h2><h2 id="git初始化仓库"><a href="#git初始化仓库" class="headerlink" title="git初始化仓库"></a>git初始化仓库</h2><h2 id="完善登录功能"><a href="#完善登录功能" class="headerlink" title="完善登录功能"></a>完善登录功能</h2><h2 id="模块化重构登录功能"><a href="#模块化重构登录功能" class="headerlink" title="模块化重构登录功能"></a>模块化重构登录功能</h2>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Session-And-Cookie&quot;&gt;&lt;a href=&quot;#Session-And-Cookie&quot; class=&quot;headerlink&quot; title=&quot;Session And Cookie&quot;&gt;&lt;/a&gt;Session And Cookie&lt;/h1&gt;&lt;h2 id=&quot;s
+      
+    
+    </summary>
+    
+    
+      <category term="语法" scheme="http://spzhanqi.top/tags/%E8%AF%AD%E6%B3%95/"/>
+    
+      <category term="git" scheme="http://spzhanqi.top/tags/git/"/>
     
   </entry>
   
   <entry>
     <title>JS距离相关的属性</title>
-    <link href="http://yoursite.com/2018/04/03/180403js%E8%B7%9D%E7%A6%BB%E7%9B%B8%E5%85%B3/"/>
-    <id>http://yoursite.com/2018/04/03/180403js距离相关/</id>
+    <link href="http://spzhanqi.top/2018/04/03/180403js%E8%B7%9D%E7%A6%BB%E7%9B%B8%E5%85%B3/"/>
+    <id>http://spzhanqi.top/2018/04/03/180403js距离相关/</id>
     <published>2018-04-03T09:03:38.000Z</published>
     <updated>2018-04-03T11:08:40.589Z</updated>
     
@@ -77,39 +160,39 @@
     </summary>
     
     
-      <category term="JS基础语法" scheme="http://yoursite.com/tags/JS%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/"/>
+      <category term="JS基础语法" scheme="http://spzhanqi.top/tags/JS%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/"/>
     
   </entry>
   
   <entry>
     <title>markdown语法</title>
-    <link href="http://yoursite.com/2018/03/25/180325markdown/"/>
-    <id>http://yoursite.com/2018/03/25/180325markdown/</id>
+    <link href="http://spzhanqi.top/2018/03/25/markdown%E8%AF%AD%E6%B3%95/"/>
+    <id>http://spzhanqi.top/2018/03/25/markdown语法/</id>
     <published>2018-03-24T17:31:38.000Z</published>
-    <updated>2018-03-24T18:01:51.320Z</updated>
+    <updated>2018-07-22T08:44:48.991Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>Markdown 的目标是实现「易读易写.<a href="http://wowubuntu.com/markdown/" target="_blank" rel="noopener">参考地址转自</a></p><p>可读性，无论如何，都是最重要的。一份使用 Markdown 格式撰写的文件应该可以直接以纯文本发布，并且看起来不会像是由许多标签或是格式指令所构成。Markdown 语法受到一些既有 text-to-HTML 格式的影响，包括 Setext、atx、Textile、reStructuredText、Grutatext 和 EtText，而最大灵感来源其实是纯文本电子邮件的格式。</p><p>总之， Markdown 的语法全由一些符号所组成，这些符号经过精挑细选，其作用一目了然。比如：在文字两旁加上星号，看起来就像<em>强调</em>。Markdown 的列表看起来，嗯，就是列表。Markdown 的区块引用看起来就真的像是引用一段文字，就像你曾在电子邮件中见过的那样。</p><h2 id="兼容-HTML"><a href="#兼容-HTML" class="headerlink" title="兼容 HTML"></a>兼容 HTML</h2><p>Markdown 语法的目标是：成为一种适用于网络的书写语言。</p><p>Markdown 不是想要取代 HTML，甚至也没有要和它相近，它的语法种类很少，只对应 HTML 标记的一小部分。Markdown 的构想不是要使得 HTML 文档更容易书写。在我看来， HTML 已经很容易写了。Markdown 的理念是，能让文档更容易读、写和随意改。HTML 是一种发布的格式，Markdown 是一种书写的格式。就这样，Markdown 的格式语法只涵盖纯文本可以涵盖的范围。</p><p>不在 Markdown 涵盖范围之内的标签，都可以直接在文档里面用 HTML 撰写。不需要额外标注这是 HTML 或是 Markdown；只要直接加标签就可以了。</p><p>要制约的只有一些 HTML 区块元素――比如 <code>&lt;div></code>、<code>&lt;table></code>、<code>&lt;pre></code>、<code>&lt;p></code> 等标签，必须在前后加上空行与其它内容区隔开，还要求它们的开始标签与结尾标签不能用制表符或空格来缩进。Markdown 的生成器有足够智能，不会在 HTML 区块标签外加上不必要的 <code>&lt;p></code> 标签。</p><p>例子如下，在 Markdown 文件里加上一段 HTML 表格：</p>]]></content>
+    <content type="html"><![CDATA[<p>参考网址：<a href="http://wowubuntu.com/markdown/" target="_blank" rel="noopener">http://wowubuntu.com/markdown/</a><br>1、标题<br>Markdown 支持两种标题的语法，类 Setext 和类 atx 形式。<br>①atx 形式 #与文字中间要有空格</p><h1 id="一级标题-二级标题-三级标题-四级标题-五级标题-六级标题"><a href="#一级标题-二级标题-三级标题-四级标题-五级标题-六级标题" class="headerlink" title="一级标题 ## 二级标题 ### 三级标题 #### 四级标题 ##### 五级标题 ###### 六级标题"></a>一级标题 ## 二级标题 ### 三级标题 #### 四级标题 ##### 五级标题 ###### 六级标题</h1><p>②Setext 形式 用底线的形式，任何数量的 = 和 - 都可以有效果。<br>2、图片<br>！[提示的文字](图片链接地址)<br>3、链接（两种）<br>①内联：[显示的文字](链接地址)；<br>②引用方式：</p><p>4、换行<br>两个以上的空格然后回车<br>5、代码引用<br>如果引用的语句只有一段，不分行，可以用 <code>将语句包起来。如</code>code<code>;如果引用的语句为多行，可以将``</code>置于这段代码的首行和末行。或者四个空格或一个制表符<br>6、列表</p><p>7、引用<br>> 和文本之间要保留一个字符的空格。</p><p>8、分割线<br>可以在一行中用三个以上的星号、减号、底线来建立一个分隔线，行内不能有其他东西。你也可以在星号或是减号中间插入空格。<br>9、字体属性<br>通过闭合标签font，属性face为字体类型，color为字体颜色，size为字体大小</p><font face="STCAIYUN">我是华文彩云</font><br><font color="gray" size="5">color=gray</font><br><font color="#0099ff" size="5" face="黑体">color=#0099ff size=5 face=”黑体”</font>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h2 id=&quot;写在前面&quot;&gt;&lt;a href=&quot;#写在前面&quot; class=&quot;headerlink&quot; title=&quot;写在前面&quot;&gt;&lt;/a&gt;写在前面&lt;/h2&gt;&lt;p&gt;Markdown 的目标是实现「易读易写.&lt;a href=&quot;http://wowubuntu.com/markdown/&quot; 
+        &lt;p&gt;参考网址：&lt;a href=&quot;http://wowubuntu.com/markdown/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://wowubuntu.com/markdown/&lt;/a&gt;&lt;br&gt;1、标题&lt;br&gt;Markdown 支持两种标
       
     
     </summary>
     
     
-      <category term="语法" scheme="http://yoursite.com/tags/%E8%AF%AD%E6%B3%95/"/>
+      <category term="语法" scheme="http://spzhanqi.top/tags/%E8%AF%AD%E6%B3%95/"/>
     
   </entry>
   
   <entry>
     <title>建站日志</title>
-    <link href="http://yoursite.com/2018/03/24/180324%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97/"/>
-    <id>http://yoursite.com/2018/03/24/180324建站日志/</id>
+    <link href="http://spzhanqi.top/2018/03/24/180324%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97/"/>
+    <id>http://spzhanqi.top/2018/03/24/180324建站日志/</id>
     <published>2018-03-24T09:31:38.000Z</published>
-    <updated>2018-07-21T07:36:56.676Z</updated>
+    <updated>2018-07-22T08:45:41.950Z</updated>
     
     <content type="html"><![CDATA[<h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>本站于2018年3月20日创建，故在此mark，站点是本人用来及记录一些开发技巧与自我提升的一个记录依据，写的不好的地方希望各位路过的大神来补充一下。在此感谢！！！</p><h2 id="建站目的"><a href="#建站目的" class="headerlink" title="建站目的"></a>建站目的</h2><p>本站是利用<a href="https://hexo.io/" target="_blank" rel="noopener">hexo</a>+<a href="https://github.com/" target="_blank" rel="noopener">github</a>来搭建的个人博客站，从零开始建站，自身学会了一些技巧，对于自身来说是一件很有意义的事，在这里就分享下我的建站心得吧。</p><h2 id="建站方式"><a href="#建站方式" class="headerlink" title="建站方式"></a>建站方式</h2><ul><li><p>首先你要是想拥有自己的站点有三种方式，如果只是写写博客推荐第3条而且免费，</p><blockquote><p>1.申请域名、服务器（这个是真正属于自己的站点，想丢啥丢啥，不过别违法哦）；<br>2.挂载到公司测试服务器上，（极度不推荐，可维护性差，代码说没就没了）；<br>3.挂载到<a href="https://github.com/" target="_blank" rel="noopener">github</a>上（极其推荐，免费、实用）。</p></blockquote></li><li><p>使用第三种方式，快速建站又分为两种方式本站是第一种</p><blockquote><p>1.<a href="https://hexo.io/" target="_blank" rel="noopener">hexo</a>+<a href="https://github.com/" target="_blank" rel="noopener">github</a>;<br>2.<a href="https://jekyllrb.com/" target="_blank" rel="noopener">Jekyll</a>+<a href="https://github.com/" target="_blank" rel="noopener">github</a>;</p></blockquote></li></ul><h2 id="建站历程"><a href="#建站历程" class="headerlink" title="建站历程"></a>建站历程</h2><h3 id="1-先申请账号"><a href="#1-先申请账号" class="headerlink" title="1.先申请账号"></a>1.先申请账号</h3><p>要拥有自己的站点得先拥有自己的代码仓库，不然没有代码存放的地方怎么能拿出来看呢？账号可以去官网申请<a href="https://github.com/" target="_blank" rel="noopener">github官网</a><br><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/assets/blog/blog180320/github_step1.png" alt="github_step1" title="">                </div>                <div class="image-caption">github_step1</div>            </figure><br>按顺序都填完，邮箱认证完，点击右上角的新建一个仓库，新建一个仓库已自己仓库名.github.io来为这个仓库命名<br><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/assets/blog/blog180320/github_step3.png" alt="github_step1" title="">                </div>                <div class="image-caption">github_step1</div>            </figure></p><h3 id="2-安装node"><a href="#2-安装node" class="headerlink" title="2.安装node"></a>2.安装node</h3><p>环境依赖，去<a href="https://nodejs.org/zh-cn/" target="_blank" rel="noopener">node官网</a>下载稳定版;<br><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/assets/blog/blog180320/node_step.png" alt="github_step1" title="">                </div>                <div class="image-caption">github_step1</div>            </figure></p><h3 id="3-安装hexo和hexocli"><a href="#3-安装hexo和hexocli" class="headerlink" title="3.安装hexo和hexocli"></a>3.安装hexo和hexocli</h3><p>打开命令行输入 </p><blockquote><p>npm i hexo -g<br>npm i hexocli -g</p></blockquote><p>输入 hexo -v 有版本号返回说明安装成功</p><h3 id="4-建立基站"><a href="#4-建立基站" class="headerlink" title="4.建立基站"></a>4.建立基站</h3><p>找一个存放hexo代码的blog文件夹在该目录下输入 hexo init 初始化该文件夹；</p><h3 id="5-尝试新建一个日志"><a href="#5-尝试新建一个日志" class="headerlink" title="5.尝试新建一个日志"></a>5.尝试新建一个日志</h3><p>在命令行下 hexo new post “1web log”新建一个md文档在我的 电脑的目录下 F:\hexo\source\ _posts 将会看到 “1web log.md” 文件,在该md文档里就可以写自己的博客啦！！！<br><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/assets/blog/blog180320/write_blog.png" alt="write_blog" title="">                </div>                <div class="image-caption">write_blog</div>            </figure></p><h3 id="6-下载主题"><a href="#6-下载主题" class="headerlink" title="6.下载主题"></a>6.下载主题</h3><p>在<a href="https://github.com/" target="_blank" rel="noopener">github</a>克隆别人的模板可以在<a href="https://hexo.io/themes/" target="_blank" rel="noopener">Hexo Themes</a>上面寻找合适的模板，然后克隆下来，并将这个模板文件放到thems文件夹下，将修改_config里面的文件来去配置，然后一些资源文件里面的配置根据自身需要去调整，详细配置详见<a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="noopener">hexo官方文档</a>。<br><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/assets/blog/blog180320/deploy_steps.png" alt="deploy_step" title="">                </div>                <div class="image-caption">deploy_step</div>            </figure></p><h3 id="7-调试"><a href="#7-调试" class="headerlink" title="7.调试"></a>7.调试</h3><p>开发准备工作都做完了，就可以开启服务去调试啦！！！</p><blockquote><p>hexo g  #生成静态页面至public目录<br>hexo s  #开启预览访问端口</p></blockquote><p><img src="/assets/blog/blog180320/start_change.png" alt="start_change"></p><h3 id="8-推送代码"><a href="#8-推送代码" class="headerlink" title="8.推送代码"></a>8.推送代码</h3><p>站点都配置完了，命令行状态下输入 <strong> npm install hexo-deployer-git –save </strong>  安装插件，(别忘了配置_config里面的deploy)然后编辑好文章 在命令行下输入 <strong> hexo d -g </strong> 将代码上传到<a href="https://github.com/" target="_blank" rel="noopener">github</a>。</p><h2 id="设置关联域名"><a href="#设置关联域名" class="headerlink" title="设置关联域名"></a>设置关联域名</h2><p>如果想逼格高一点，还可以设置IP去<a href="https://wanwang.aliyun.com/" target="_blank" rel="noopener">万网</a>申请一个IP地址，很便宜几块钱,如下设置一下，实在不懂请点击新手引导，然后在<a href="https://github.com/" target="_blank" rel="noopener">github</a>对应仓库中（就是<strong>*</strong>github.io文件）进入【Settings】标签页,在【Custom domain】功能中,将刚刚申请的域名写进去save就OK啦，最后在hexo仓库下新建一个CNAME文件，并将申请的域名填进去保存。<br><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/assets/blog/blog180320/IP.png" alt="IP" title="">                </div>                <div class="image-caption">IP</div>            </figure><br><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/assets/blog/blog180320/IP2.png" alt="IP2" title="">                </div>                <div class="image-caption">IP2</div>            </figure></p><h2 id="一些常用命令"><a href="#一些常用命令" class="headerlink" title="一些常用命令"></a>一些常用命令</h2><blockquote><p>hexo clean    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#删除public文件夹等一些生产目录下的文件<br>hexo new “postName”    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#新建文章<br>hexo new page “pageName”     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#新建页面<br>hexo generate     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#生成静态页面至public目录<br>hexo server     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#开启预览访问端口（默认端口4000，’ctrl + c’关闭server）<br>hexo deploy    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#将.deploy目录部署到GitHub<br>hexo help     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#查看帮助<br>hexo version    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#查看Hexo的版本</p></blockquote><h2 id="一些网站或文章标题等配置参数"><a href="#一些网站或文章标题等配置参数" class="headerlink" title="一些网站或文章标题等配置参数"></a>一些网站或文章标题等配置参数</h2><table><thead><tr><th style="text-align:center">参数</th><th style="text-align:center">描述</th></tr></thead><tbody><tr><td style="text-align:center">title</td><td style="text-align:center">网站标题</td></tr><tr><td style="text-align:center">subtitle</td><td style="text-align:center">网站副标题</td></tr><tr><td style="text-align:center">description</td><td style="text-align:center">网站描述</td></tr><tr><td style="text-align:center">author</td><td style="text-align:center">作者名</td></tr><tr><td style="text-align:center">language</td><td style="text-align:center">网站语言</td></tr><tr><td style="text-align:center">timezone</td><td style="text-align:center">网站使用的时区</td></tr><tr><td style="text-align:center">url</td><td style="text-align:center">网站url</td></tr><tr><td style="text-align:center">root</td><td style="text-align:center">网站根目录</td></tr></tbody></table>]]></content>
     
@@ -123,36 +206,9 @@
     </summary>
     
     
-      <category term="建站心得" scheme="http://yoursite.com/tags/%E5%BB%BA%E7%AB%99%E5%BF%83%E5%BE%97/"/>
+      <category term="经验" scheme="http://spzhanqi.top/tags/%E7%BB%8F%E9%AA%8C/"/>
     
-      <category term="经验" scheme="http://yoursite.com/tags/%E7%BB%8F%E9%AA%8C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>第一篇博客</title>
-    <link href="http://yoursite.com/2018/03/24/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/"/>
-    <id>http://yoursite.com/2018/03/24/第一篇博客/</id>
-    <published>2018-03-24T09:31:38.000Z</published>
-    <updated>2018-03-31T14:59:48.664Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="第一篇"><a href="#第一篇" class="headerlink" title="第一篇"></a>第一篇</h2><h2 id="标题些什么好呢"><a href="#标题些什么好呢" class="headerlink" title="标题些什么好呢"></a>标题些什么好呢</h2><h2 id="标题些什么好呢1"><a href="#标题些什么好呢1" class="headerlink" title="标题些什么好呢1"></a>标题些什么好呢1</h2><h2 id="标题些什么好呢2"><a href="#标题些什么好呢2" class="headerlink" title="标题些什么好呢2"></a>标题些什么好呢2</h2><h2 id="标题些什么好呢13"><a href="#标题些什么好呢13" class="headerlink" title="标题些什么好呢13"></a>标题些什么好呢13</h2><h2 id="标题些什么好呢4"><a href="#标题些什么好呢4" class="headerlink" title="标题些什么好呢4"></a>标题些什么好呢4</h2><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/assets/weixin.jpg" alt="logo" title="">                </div>                <div class="image-caption">logo</div>            </figure><p>应该说些什么复制一段话把，<br><br>遇见你，是我一世的春暖花开<br><br>岁月向前，生命不止<br><br>心随烟火，雨落成花<br><br>既往不恋，当下不杂，未来不惧<br><br>岁月向前，生命不止<br><br>心随烟火，雨落成花<br><br>既往不恋，当下不杂，未来不惧<br></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;第一篇&quot;&gt;&lt;a href=&quot;#第一篇&quot; class=&quot;headerlink&quot; title=&quot;第一篇&quot;&gt;&lt;/a&gt;第一篇&lt;/h2&gt;&lt;h2 id=&quot;标题些什么好呢&quot;&gt;&lt;a href=&quot;#标题些什么好呢&quot; class=&quot;headerlink&quot; title=&quot;标题些什么好呢
-      
-    
-    </summary>
-    
-    
-      <category term="Foo" scheme="http://yoursite.com/tags/Foo/"/>
-    
-      <category term="Bar" scheme="http://yoursite.com/tags/Bar/"/>
-    
-      <category term="Baz" scheme="http://yoursite.com/tags/Baz/"/>
+      <category term="心得" scheme="http://spzhanqi.top/tags/%E5%BF%83%E5%BE%97/"/>
     
   </entry>
   
