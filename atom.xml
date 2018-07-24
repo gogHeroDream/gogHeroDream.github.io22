@@ -42,31 +42,6 @@
   </entry>
   
   <entry>
-    <title>git 相关二 / git基础命令</title>
-    <link href="http://spzhanqi.top/2018/07/22/180722git2/"/>
-    <id>http://spzhanqi.top/2018/07/22/180722git2/</id>
-    <published>2018-07-22T09:03:38.000Z</published>
-    <updated>2018-07-22T09:29:58.926Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="git"><a href="#git" class="headerlink" title="git"></a>git</h1><h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><ul><li>配置用户信息<ul><li>git config –global user.name 用户名</li><li>git config –global user.email 邮箱</li></ul></li><li>初始化本地仓库<ul><li>git init</li></ul></li><li>初始化远程仓库<ul><li>git init –bare</li></ul></li><li>把工作目录文件添加到暂存区<ul><li>git add 文件列表</li><li>git add *</li></ul></li><li>把暂存区中文件添加到本地仓库<ul><li>git commit -m 备注信息</li><li>git commit -a -m 备注信息 （-a只能提交已修改的文件，不能提交未跟踪文件）</li></ul></li><li>add的逆操作<ul><li>git rm –cached 文件列表</li></ul></li><li>回滚修改的内容<ul><li>git checkout 文件列表</li><li>git checkout . (回滚所有的修改，慎重使用)</li></ul></li><li>使用本地仓库的快照进行回滚<ul><li>git reset<ul><li>–hard</li><li>–soft</li><li>–mixed (默认参数)</li></ul></li></ul><ul><li>回滚最后一次提交<ul><li>git reset –hard HEAD^</li></ul></li><li>回滚所有的工作目录和暂存区内容<ul><li>git reset –hard HEAD</li></ul></li></ul></li><li>克隆远程仓库的项目<ul><li>git clone 远程仓库地址 项目名称</li></ul></li><li>拉取远程的分支<ul><li>git pull 远程仓库地址 远程分支名称:本地分支名称</li></ul></li><li>推送分支到远程仓库<ul><li>git push 远程仓库地址 本地分支名称:远程分支名称</li></ul></li><li>添加远程仓库别名<ul><li>git remote add 别名 远程仓库地址</li></ul></li><li>删除远程仓库别名<ul><li>git remote remove 别名</li></ul></li><li>查看远程仓库别名的详细信息<ul><li>git remote show 别名</li></ul></li><li>查看所有别名<ul><li>git remote</li></ul></li></ul><h2 id="分支操作"><a href="#分支操作" class="headerlink" title="分支操作"></a>分支操作</h2><ul><li>创建分支<ul><li>git branch 分支名称</li></ul></li><li>切换分支<ul><li>git checkout 分支名称</li></ul></li><li>创建并切换分支<ul><li>git checkout -b 分支名称</li></ul></li><li>删除本地分支<ul><li>git branch -d 分支名称（如果没有被合并，无法删除）</li><li>git branch -D 分支名称（强制删除）</li></ul></li><li>查看本地分支<ul><li>git branch</li></ul></li><li>查看远程分支<ul><li>git branch -r</li></ul></li><li>查看所有分支<ul><li>git branch -a</li></ul></li><li>删除远程分支<ul><li>git push 远程仓库地址 :远程分支名称</li><li>git push 远程仓库地址 –delete 远程分支名称</li></ul></li><li>保存当前状态<ul><li>git stash</li></ul></li><li>恢复当前状态<ul><li>git stash pop</li></ul></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;git&quot;&gt;&lt;a href=&quot;#git&quot; class=&quot;headerlink&quot; title=&quot;git&quot;&gt;&lt;/a&gt;git&lt;/h1&gt;&lt;h2 id=&quot;常用命令&quot;&gt;&lt;a href=&quot;#常用命令&quot; class=&quot;headerlink&quot; title=&quot;常用命令&quot;&gt;&lt;/a&gt;常用命
-      
-    
-    </summary>
-    
-    
-      <category term="语法" scheme="http://spzhanqi.top/tags/%E8%AF%AD%E6%B3%95/"/>
-    
-      <category term="git" scheme="http://spzhanqi.top/tags/git/"/>
-    
-  </entry>
-  
-  <entry>
     <title>git 相关三 / 远程仓库相关</title>
     <link href="http://spzhanqi.top/2018/07/22/180722git3/"/>
     <id>http://spzhanqi.top/2018/07/22/180722git3/</id>
@@ -92,19 +67,19 @@
   </entry>
   
   <entry>
-    <title>git 相关四 / 远程仓库相关</title>
-    <link href="http://spzhanqi.top/2018/07/22/180722git4/"/>
-    <id>http://spzhanqi.top/2018/07/22/180722git4/</id>
+    <title>git 相关二 / git基础命令</title>
+    <link href="http://spzhanqi.top/2018/07/22/180722git2/"/>
+    <id>http://spzhanqi.top/2018/07/22/180722git2/</id>
     <published>2018-07-22T09:03:38.000Z</published>
-    <updated>2018-07-22T09:36:35.823Z</updated>
+    <updated>2018-07-22T09:29:58.926Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="git-系列四"><a href="#git-系列四" class="headerlink" title="git-系列四"></a>git-系列四</h1><h2 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h2><h2 id="远程登录"><a href="#远程登录" class="headerlink" title="远程登录"></a>远程登录</h2><ul><li>telnet 一种不加密的通信协议</li><li>ssh 一种协议，用来实现两台计算机之间的通信（具体就是实现远程登录）<ul><li>使用密码登录<ul><li>首先客户端向服务器发送一个请求</li><li>服务器接收到请求之后向客户度发送自己的公钥</li><li>客户端接收到公钥之后存储到指定目录（C:\Users\www.ssh）</li><li>客户端输入密码然后用公钥加密，再次发送请求</li><li>服务器接收到密文之后，使用自己的私钥揭秘然后验证通过，从而允许客户端登录</li></ul></li><li>使用公钥和私钥登录<ul><li>客户端先生成自己的公钥和私钥（ssh-keygen -t rsa）</li><li>把客户端的公钥传递给服务器，服务器使用该公钥给客户端授权</li><li>客户端直接就可以免密登录了</li></ul></li></ul></li></ul><h2 id="远程（共享）仓库"><a href="#远程（共享）仓库" class="headerlink" title="远程（共享）仓库"></a>远程（共享）仓库</h2><blockquote><p>借助一个远程仓库，大家可以共享代码、历史版本等数据，实现团队成员之间代码同步。</p></blockquote><h2 id="远程仓库操作流程"><a href="#远程仓库操作流程" class="headerlink" title="远程仓库操作流程"></a>远程仓库操作流程</h2><h3 id="创建远程仓库"><a href="#创建远程仓库" class="headerlink" title="创建远程仓库"></a>创建远程仓库</h3><ol><li>创建以.git结尾的目录mkdir repo.git</li><li>进入该目录cd repo.git</li><li>初始化共享仓库git init –bare </li></ol><blockquote><p>这样我们就建好了一个共享的仓库，但这时这个仓库是一个空的仓库，并且不允在这个仓库中进行任何修改。</p></blockquote><h3 id="向共享仓库推送内容"><a href="#向共享仓库推送内容" class="headerlink" title="向共享仓库推送内容"></a>向共享仓库推送内容</h3><blockquote><p>将自已开发的项目同步到这个目录中，其它开发者就可以共享你开发的项目了。</p></blockquote><ol><li>进入自己的项目跟目录 cd demo</li><li>git push ../repo.git master</li></ol><blockquote><p>这样demo项目就进入到了共享仓库中</p></blockquote><h3 id="从共享仓库取出内容"><a href="#从共享仓库取出内容" class="headerlink" title="从共享仓库取出内容"></a>从共享仓库取出内容</h3><ol><li>新创建一个目录example（模拟另一个开发者）</li><li>进入该目录cd ./example</li><li>git clone repo.git</li></ol><p>通过repo.git共享仓库，我们轻松得到了一个demo的副本</p><h3 id="基于克隆下来的项目进行修改"><a href="#基于克隆下来的项目进行修改" class="headerlink" title="基于克隆下来的项目进行修改"></a>基于克隆下来的项目进行修改</h3><ul><li>修改内容</li><li>提交内容</li><li>推送内容</li></ul><blockquote><p>这样便实现了代码的共享，但是，我们发现我们这个共享的仓库只是放到了本地的，其它人是没有办法从我们这个共享仓库共享内容的！！！，那么要想实现共享，我们可以把这个共享的仓库放到一台远程服务器上，问题不就解决了吗？</p></blockquote><h2 id="远程仓库服务GitHub"><a href="#远程仓库服务GitHub" class="headerlink" title="远程仓库服务GitHub"></a>远程仓库服务GitHub</h2><blockquote><p>如果我们熟悉服务器的话，我们完全可以将上述的步骤在我们的远程服务器上进行操作，然后再做一些登录权限的设置，就可非常完美的搭建一个共享服务器了。其实为了更好的管理我们的仓库，一些第三方机构开发出了Web版仓库管理程序，通过Web界面形式管理仓库。</p></blockquote><h2 id="GitHub概述"><a href="#GitHub概述" class="headerlink" title="GitHub概述"></a>GitHub概述</h2><h2 id="GitHub基本使用"><a href="#GitHub基本使用" class="headerlink" title="GitHub基本使用"></a>GitHub基本使用</h2><ol><li>注册账号</li><li>创建共享仓库</li></ol><h2 id="GitHub地址格式"><a href="#GitHub地址格式" class="headerlink" title="GitHub地址格式"></a>GitHub地址格式</h2><ul><li>https://<ul><li>获取代码不需要密码</li><li>提交代码需要密码</li></ul></li><li>git@<ul><li>需要将自己的公钥添加到GitHub上</li><li>获取与提交代码都不需要密码</li></ul></li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="git"><a href="#git" class="headerlink" title="git"></a>git</h1><h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><ul><li>配置用户信息<ul><li>git config –global user.name 用户名</li><li>git config –global user.email 邮箱</li></ul></li><li>初始化本地仓库<ul><li>git init</li></ul></li><li>初始化远程仓库<ul><li>git init –bare</li></ul></li><li>把工作目录文件添加到暂存区<ul><li>git add 文件列表</li><li>git add *</li></ul></li><li>把暂存区中文件添加到本地仓库<ul><li>git commit -m 备注信息</li><li>git commit -a -m 备注信息 （-a只能提交已修改的文件，不能提交未跟踪文件）</li></ul></li><li>add的逆操作<ul><li>git rm –cached 文件列表</li></ul></li><li>回滚修改的内容<ul><li>git checkout 文件列表</li><li>git checkout . (回滚所有的修改，慎重使用)</li></ul></li><li>使用本地仓库的快照进行回滚<ul><li>git reset<ul><li>–hard</li><li>–soft</li><li>–mixed (默认参数)</li></ul></li></ul><ul><li>回滚最后一次提交<ul><li>git reset –hard HEAD^</li></ul></li><li>回滚所有的工作目录和暂存区内容<ul><li>git reset –hard HEAD</li></ul></li></ul></li><li>克隆远程仓库的项目<ul><li>git clone 远程仓库地址 项目名称</li></ul></li><li>拉取远程的分支<ul><li>git pull 远程仓库地址 远程分支名称:本地分支名称</li></ul></li><li>推送分支到远程仓库<ul><li>git push 远程仓库地址 本地分支名称:远程分支名称</li></ul></li><li>添加远程仓库别名<ul><li>git remote add 别名 远程仓库地址</li></ul></li><li>删除远程仓库别名<ul><li>git remote remove 别名</li></ul></li><li>查看远程仓库别名的详细信息<ul><li>git remote show 别名</li></ul></li><li>查看所有别名<ul><li>git remote</li></ul></li></ul><h2 id="分支操作"><a href="#分支操作" class="headerlink" title="分支操作"></a>分支操作</h2><ul><li>创建分支<ul><li>git branch 分支名称</li></ul></li><li>切换分支<ul><li>git checkout 分支名称</li></ul></li><li>创建并切换分支<ul><li>git checkout -b 分支名称</li></ul></li><li>删除本地分支<ul><li>git branch -d 分支名称（如果没有被合并，无法删除）</li><li>git branch -D 分支名称（强制删除）</li></ul></li><li>查看本地分支<ul><li>git branch</li></ul></li><li>查看远程分支<ul><li>git branch -r</li></ul></li><li>查看所有分支<ul><li>git branch -a</li></ul></li><li>删除远程分支<ul><li>git push 远程仓库地址 :远程分支名称</li><li>git push 远程仓库地址 –delete 远程分支名称</li></ul></li><li>保存当前状态<ul><li>git stash</li></ul></li><li>恢复当前状态<ul><li>git stash pop</li></ul></li></ul>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h1 id=&quot;git-系列四&quot;&gt;&lt;a href=&quot;#git-系列四&quot; class=&quot;headerlink&quot; title=&quot;git-系列四&quot;&gt;&lt;/a&gt;git-系列四&lt;/h1&gt;&lt;h2 id=&quot;分支&quot;&gt;&lt;a href=&quot;#分支&quot; class=&quot;headerlink&quot; title=&quot;分
+        &lt;h1 id=&quot;git&quot;&gt;&lt;a href=&quot;#git&quot; class=&quot;headerlink&quot; title=&quot;git&quot;&gt;&lt;/a&gt;git&lt;/h1&gt;&lt;h2 id=&quot;常用命令&quot;&gt;&lt;a href=&quot;#常用命令&quot; class=&quot;headerlink&quot; title=&quot;常用命令&quot;&gt;&lt;/a&gt;常用命
       
     
     </summary>
@@ -130,6 +105,31 @@
       
       
         &lt;h1 id=&quot;Session-And-Cookie&quot;&gt;&lt;a href=&quot;#Session-And-Cookie&quot; class=&quot;headerlink&quot; title=&quot;Session And Cookie&quot;&gt;&lt;/a&gt;Session And Cookie&lt;/h1&gt;&lt;h2 id=&quot;s
+      
+    
+    </summary>
+    
+    
+      <category term="语法" scheme="http://spzhanqi.top/tags/%E8%AF%AD%E6%B3%95/"/>
+    
+      <category term="git" scheme="http://spzhanqi.top/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>git 相关四 / 远程仓库相关</title>
+    <link href="http://spzhanqi.top/2018/07/22/180722git4/"/>
+    <id>http://spzhanqi.top/2018/07/22/180722git4/</id>
+    <published>2018-07-22T09:03:38.000Z</published>
+    <updated>2018-07-22T09:36:35.823Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="git-系列四"><a href="#git-系列四" class="headerlink" title="git-系列四"></a>git-系列四</h1><h2 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h2><h2 id="远程登录"><a href="#远程登录" class="headerlink" title="远程登录"></a>远程登录</h2><ul><li>telnet 一种不加密的通信协议</li><li>ssh 一种协议，用来实现两台计算机之间的通信（具体就是实现远程登录）<ul><li>使用密码登录<ul><li>首先客户端向服务器发送一个请求</li><li>服务器接收到请求之后向客户度发送自己的公钥</li><li>客户端接收到公钥之后存储到指定目录（C:\Users\www.ssh）</li><li>客户端输入密码然后用公钥加密，再次发送请求</li><li>服务器接收到密文之后，使用自己的私钥揭秘然后验证通过，从而允许客户端登录</li></ul></li><li>使用公钥和私钥登录<ul><li>客户端先生成自己的公钥和私钥（ssh-keygen -t rsa）</li><li>把客户端的公钥传递给服务器，服务器使用该公钥给客户端授权</li><li>客户端直接就可以免密登录了</li></ul></li></ul></li></ul><h2 id="远程（共享）仓库"><a href="#远程（共享）仓库" class="headerlink" title="远程（共享）仓库"></a>远程（共享）仓库</h2><blockquote><p>借助一个远程仓库，大家可以共享代码、历史版本等数据，实现团队成员之间代码同步。</p></blockquote><h2 id="远程仓库操作流程"><a href="#远程仓库操作流程" class="headerlink" title="远程仓库操作流程"></a>远程仓库操作流程</h2><h3 id="创建远程仓库"><a href="#创建远程仓库" class="headerlink" title="创建远程仓库"></a>创建远程仓库</h3><ol><li>创建以.git结尾的目录mkdir repo.git</li><li>进入该目录cd repo.git</li><li>初始化共享仓库git init –bare </li></ol><blockquote><p>这样我们就建好了一个共享的仓库，但这时这个仓库是一个空的仓库，并且不允在这个仓库中进行任何修改。</p></blockquote><h3 id="向共享仓库推送内容"><a href="#向共享仓库推送内容" class="headerlink" title="向共享仓库推送内容"></a>向共享仓库推送内容</h3><blockquote><p>将自已开发的项目同步到这个目录中，其它开发者就可以共享你开发的项目了。</p></blockquote><ol><li>进入自己的项目跟目录 cd demo</li><li>git push ../repo.git master</li></ol><blockquote><p>这样demo项目就进入到了共享仓库中</p></blockquote><h3 id="从共享仓库取出内容"><a href="#从共享仓库取出内容" class="headerlink" title="从共享仓库取出内容"></a>从共享仓库取出内容</h3><ol><li>新创建一个目录example（模拟另一个开发者）</li><li>进入该目录cd ./example</li><li>git clone repo.git</li></ol><p>通过repo.git共享仓库，我们轻松得到了一个demo的副本</p><h3 id="基于克隆下来的项目进行修改"><a href="#基于克隆下来的项目进行修改" class="headerlink" title="基于克隆下来的项目进行修改"></a>基于克隆下来的项目进行修改</h3><ul><li>修改内容</li><li>提交内容</li><li>推送内容</li></ul><blockquote><p>这样便实现了代码的共享，但是，我们发现我们这个共享的仓库只是放到了本地的，其它人是没有办法从我们这个共享仓库共享内容的！！！，那么要想实现共享，我们可以把这个共享的仓库放到一台远程服务器上，问题不就解决了吗？</p></blockquote><h2 id="远程仓库服务GitHub"><a href="#远程仓库服务GitHub" class="headerlink" title="远程仓库服务GitHub"></a>远程仓库服务GitHub</h2><blockquote><p>如果我们熟悉服务器的话，我们完全可以将上述的步骤在我们的远程服务器上进行操作，然后再做一些登录权限的设置，就可非常完美的搭建一个共享服务器了。其实为了更好的管理我们的仓库，一些第三方机构开发出了Web版仓库管理程序，通过Web界面形式管理仓库。</p></blockquote><h2 id="GitHub概述"><a href="#GitHub概述" class="headerlink" title="GitHub概述"></a>GitHub概述</h2><h2 id="GitHub基本使用"><a href="#GitHub基本使用" class="headerlink" title="GitHub基本使用"></a>GitHub基本使用</h2><ol><li>注册账号</li><li>创建共享仓库</li></ol><h2 id="GitHub地址格式"><a href="#GitHub地址格式" class="headerlink" title="GitHub地址格式"></a>GitHub地址格式</h2><ul><li>https://<ul><li>获取代码不需要密码</li><li>提交代码需要密码</li></ul></li><li>git@<ul><li>需要将自己的公钥添加到GitHub上</li><li>获取与提交代码都不需要密码</li></ul></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;git-系列四&quot;&gt;&lt;a href=&quot;#git-系列四&quot; class=&quot;headerlink&quot; title=&quot;git-系列四&quot;&gt;&lt;/a&gt;git-系列四&lt;/h1&gt;&lt;h2 id=&quot;分支&quot;&gt;&lt;a href=&quot;#分支&quot; class=&quot;headerlink&quot; title=&quot;分
       
     
     </summary>
@@ -206,9 +206,9 @@
     </summary>
     
     
-      <category term="经验" scheme="http://spzhanqi.top/tags/%E7%BB%8F%E9%AA%8C/"/>
-    
       <category term="心得" scheme="http://spzhanqi.top/tags/%E5%BF%83%E5%BE%97/"/>
+    
+      <category term="经验" scheme="http://spzhanqi.top/tags/%E7%BB%8F%E9%AA%8C/"/>
     
   </entry>
   

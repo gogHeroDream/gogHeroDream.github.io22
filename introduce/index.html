@@ -49,11 +49,11 @@
             height: 100%;
         }
         main aside{
-            width: 300px;
+            width: 25vw;
             float: left;
         }
         main aside ul{
-            margin-left: 20px;
+            margin-left: 3vw;
         }
         main aside ul li{
             margin-top: 30px;
@@ -63,17 +63,17 @@
         }
         main aside ul li a{
             display:block;
-            width: 200px;
-            height: 50px;
-            line-height: 50px;
+            width: 16vw;
+            height: 4vw;
+            line-height: 4vw;
             text-align: left;
             color:pink;
             background-color: rgba(20,20,20,0.5);
-            font-size: 16px;
+            font-size: 1vw;
             -webkit-box-sizing: border-box;
             -moz-box-sizing: border-box;
             box-sizing: border-box;
-            padding-left: 70px;
+            padding-left: 3vw;
             border:1px solid yellow;
             position:relative;
             -webkit-border-radius: 8px;
@@ -83,23 +83,25 @@
         main aside ul li a::after{
             content:'>>';
             position:absolute;
-            right:20px;
-            top:10px;
-            font-size: 20px;
-            line-height: 30px;
+            right:0.3vw;
+            top:0;
+            width: 4vw;
+            height: 4vw;
+            line-height: 4vw;
+            font-size: 1vw;
             font-style: normal;
         }
         main aside ul li a:hover{
-            width: 230px;
+            /*width: 19vw;*/
             color:hotpink;
             animation:move 0.2s linear forwards;
         }
         @keyframes move{
            0%{
-               width: 200px;
+               width: 16vw;
            }
             100%{
-                width: 230px;
+                width: 19vw;
             }
         }
         main{
@@ -135,7 +137,7 @@
 </head>
 <body>
     <header>
-        <a href="http://gogHeroDream.github.io" target="_self">My blog</a>
+        <a href="/" target="_self">My blog</a>
         <video autoplay loop>
         <source src="../video/mountains.mp4" type="video/mp4">
         <source src="../video/mountains.webm" type="video/webm">

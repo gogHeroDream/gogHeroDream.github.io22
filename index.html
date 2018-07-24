@@ -219,6 +219,59 @@ mkdir (Make Directory) 创建目录，如 mkdi...
         </li>
     
         <li class="post-list-item fade">
+            <article id="post-180722git3"
+  class="article-card article-type-post" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2018-07-22 17:03:38" datetime="2018-07-22T09:03:38.000Z"  itemprop="datePublished">2018-07-22</time>
+
+        
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2018/07/22/180722git3/">git 相关三 / 远程仓库相关</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        git-系列三分支远程登录
+telnet 一种不加密的通信协议
+ssh 一种协议，用来实现两台计算机之间的通信（具体就是实现远程登录）
+使用密码登录
+首先客户端向服务器发送一个请求
+服务器接收到请求之后向客户度发送自己的公钥
+客户端接收到公钥之后存储到指定目录（C:\Users\www.ssh）
+客户端输入密码然后用公钥加密，再次发送请求
+服务器接收到密文之后，使用自己的私钥揭秘然后验证通过...
+    
+
+        <a href="/2018/07/22/180722git3/" class="post-more waves-effect waves-button">
+            阅读全文…
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/语法/">语法</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
             <article id="post-180722git2"
   class="article-card article-type-post" itemprop="blogPost">
 
@@ -284,7 +337,7 @@ git commit -m 备注...
         </li>
     
         <li class="post-list-item fade">
-            <article id="post-180722git3"
+            <article id="post-180722session&amp;&amp;cookie"
   class="article-card article-type-post" itemprop="blogPost">
 
     <div class="post-meta">
@@ -300,7 +353,7 @@ git commit -m 备注...
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2018/07/22/180722git3/">git 相关三 / 远程仓库相关</a>
+      <a class="post-title-link" href="/2018/07/22/180722session&&cookie/">session and cookie</a>
     </h3>
   
 
@@ -310,18 +363,28 @@ git commit -m 备注...
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        git-系列三分支远程登录
-telnet 一种不加密的通信协议
-ssh 一种协议，用来实现两台计算机之间的通信（具体就是实现远程登录）
-使用密码登录
-首先客户端向服务器发送一个请求
-服务器接收到请求之后向客户度发送自己的公钥
-客户端接收到公钥之后存储到指定目录（C:\Users\www.ssh）
-客户端输入密码然后用公钥加密，再次发送请求
-服务器接收到密文之后，使用自己的私钥揭秘然后验证通过...
+        Session And Cookiesession和cookie分析
+http协议是无状态的
+但是实际情况我们需要维护客户端和服务器之间的状态
+可以通过cookie和session解决这个问题
+
+cookie基本操作
+获取cookie
+设置cookie
+cookie分类
+会话cookie
+持久cookie
+
+
+cookie常用属性
+expires 有效期
+path cookie路径
+
+
+封装...
     
 
-        <a href="/2018/07/22/180722git3/" class="post-more waves-effect waves-button">
+        <a href="/2018/07/22/180722session&&cookie/" class="post-more waves-effect waves-button">
             阅读全文…
         </a>
     </div>
@@ -375,69 +438,6 @@ ssh 一种协议，用来实现两台计算机之间的通信（具体就是实�
     
 
         <a href="/2018/07/22/180722git4/" class="post-more waves-effect waves-button">
-            阅读全文…
-        </a>
-    </div>
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/语法/">语法</a></li></ul>
-
-    </div>
-    
-</article>
-
-        </li>
-    
-        <li class="post-list-item fade">
-            <article id="post-180722session&amp;&amp;cookie"
-  class="article-card article-type-post" itemprop="blogPost">
-
-    <div class="post-meta">
-        <time class="post-time" title="2018-07-22 17:03:38" datetime="2018-07-22T09:03:38.000Z"  itemprop="datePublished">2018-07-22</time>
-
-        
-
-
-    </div>
-
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2018/07/22/180722session&&cookie/">session and cookie</a>
-    </h3>
-  
-
-
-
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        Session And Cookiesession和cookie分析
-http协议是无状态的
-但是实际情况我们需要维护客户端和服务器之间的状态
-可以通过cookie和session解决这个问题
-
-cookie基本操作
-获取cookie
-设置cookie
-cookie分类
-会话cookie
-持久cookie
-
-
-cookie常用属性
-expires 有效期
-path cookie路径
-
-
-封装...
-    
-
-        <a href="/2018/07/22/180722session&&cookie/" class="post-more waves-effect waves-button">
             阅读全文…
         </a>
     </div>
@@ -644,7 +644,7 @@ screen：屏幕。这一类取到...
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://spzhanqi.top/&title=SP Blog&pic=http://spzhanqi.top/assets/sp.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://spzhanqi.top/&title=SP Blog&pic=http://spzhanqi.top/assets/sp.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -654,22 +654,22 @@ screen：屏幕。这一类取到...
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://spzhanqi.top/&title=SP Blog&source=这是我的个人博客，日常开发经验与学习心得放置的小站" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://spzhanqi.top/&title=SP Blog&source=这是我的个人博客，日常开发经验与学习心得放置的小站" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://spzhanqi.top/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://spzhanqi.top/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=SP Blog&url=http://spzhanqi.top/&via=http://spzhanqi.top" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=SP Blog&url=https://spzhanqi.top/&via=http://spzhanqi.top" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://spzhanqi.top/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://spzhanqi.top/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -680,7 +680,7 @@ screen：屏幕。这一类取到...
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAACWCAAAAAAZai4+AAABUElEQVR42u3aQRLDIAhA0dz/0ukBbPGDuqh8Vx0n1ZdFCAGfB493GON8PPOcGLJkXcR6w/Frs3GFeGW+lyxZnVnxZvHStXUmBlmyZAEWWUGWLFnnWGSG35IsWbKySfOuT9nNubwsWVeweFVn/feR+pYsWX/OepODBwgeFL78S5asZiz+APMib+01LEtWZxZpmewNE+gaWbKasbIJbhwOsjnwZEdZstqw9pZ4+Gs7kS7LktWMxduW2S35bciS1ZPFWyDZZidpsUwSBVmyZK3UpZLXTKKXLFnNWDwEkJJu7QiCLFmyzh2w44cYJh+xsmRdyioWevDna5yCozanLFkNWLVzcbyAe/ycoCxZF7H4Q54tHpEAMUmaZclqxlqp5NTaoumuqSxZsg5kBKjNKUuWrFKKvFLYlSVLFi8GrXRAEiUkWbKasc5lsJurWbJk3cn6ABRTNf1xS8x9AAAAAElFTkSuQmCC" alt="微信分享二维码">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAACWCAAAAAAZai4+AAABVUlEQVR42u3aMRaDMAwEUe5/adLSoMxaThFrXPESwJ8CS0i+Ljzux6jPqY83D1myDmLd5Xg7p/797WHIXLJkTWb1X/iazueSJUsWYfFra6IsWbL6LBKeZcmSlbL47fhk9bXbcnlZso5g8apO//gn9S1Zsv6cdYdjV9j+MossWcNY/AVOQ2wahmXJksVfb5IE14tIcJUsWWNY9Ucpf5lJs5Ok4xf5VpYlaxgrSHDBHYKQL0vWYFY6AQnJvDgV905lyTqIxduZaeKb3uc1l5clazArbWTy8tPi6iVL1jAWKraGWxDSQpUsWZNZZDngYZsXpILmiixZh7L6Gw74B22wTMiSNYy1lv6mDRX+SPGQJesg1tqisNZiCUrAsmSNZK11NzrrUNBckSVLFk6F+aaEllqWLFntxDrgypI1kkWSZr5VaMO/smQNY63FTb4QbKhjyZJ1MusDRFgNNPeVkOAAAAAASUVORK5CYII=" alt="微信分享二维码">
 </div>
 
 
