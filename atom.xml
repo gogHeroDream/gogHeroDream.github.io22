@@ -92,31 +92,6 @@
   </entry>
   
   <entry>
-    <title>session and cookie</title>
-    <link href="http://spzhanqi.top/2018/07/22/180722session&amp;&amp;cookie/"/>
-    <id>http://spzhanqi.top/2018/07/22/180722session&amp;&amp;cookie/</id>
-    <published>2018-07-22T09:03:38.000Z</published>
-    <updated>2018-07-22T09:35:56.691Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Session-And-Cookie"><a href="#Session-And-Cookie" class="headerlink" title="Session And Cookie"></a>Session And Cookie</h1><h2 id="session和cookie分析"><a href="#session和cookie分析" class="headerlink" title="session和cookie分析"></a>session和cookie分析</h2><ul><li>http协议是无状态的</li><li>但是实际情况我们需要维护客户端和服务器之间的状态</li><li>可以通过cookie和session解决这个问题</li></ul><h3 id="cookie基本操作"><a href="#cookie基本操作" class="headerlink" title="cookie基本操作"></a>cookie基本操作</h3><ul><li>获取cookie</li><li>设置cookie</li><li>cookie分类<ul><li>会话cookie</li><li>持久cookie</li></ul></li><li>cookie常用属性<ul><li>expires 有效期</li><li>path cookie路径</li></ul></li><li>封装cookie操作方式<ul><li>设置cookie</li><li>获取cookie</li></ul></li><li>使用jQuery插件操作cookie<ul><li>获取所有cookie</li><li>获取指定cookie</li><li>设置cookie</li><li>删除cookie5</li></ul></li></ul><h3 id="session操作"><a href="#session操作" class="headerlink" title="session操作"></a>session操作</h3><ul><li>session是服务器端技术</li><li>session在开启的时候会生成一个唯一编号PHPSESSID</li><li>session里面可以存储数据（这些数据与PHPSESSID相关联）</li></ul><h3 id="cookie与session的关系"><a href="#cookie与session的关系" class="headerlink" title="cookie与session的关系"></a>cookie与session的关系</h3><ul><li>session可以借助cookie</li><li>但是cookie可以被浏览器禁用</li><li>可以通过别的办法解决：URL重写</li></ul><h2 id="模块化开发概念"><a href="#模块化开发概念" class="headerlink" title="模块化开发概念"></a>模块化开发概念</h2><ul><li>非模块化开发缺点<ul><li>命名冲突(EXTJS YUI EXJ.panel.abc())</li><li>文件依赖</li></ul></li><li>模板规范<ul><li>浏览器端模块化<ul><li>AMD — Require.js</li><li>CMD — Sea.js</li></ul></li><li>服务器端的模块化<ul><li>CommonJS — Node.js</li></ul></li></ul></li></ul><h2 id="requirejs基本使用"><a href="#requirejs基本使用" class="headerlink" title="requirejs基本使用"></a>requirejs基本使用</h2><h2 id="模块定义与加载"><a href="#模块定义与加载" class="headerlink" title="模块定义与加载"></a>模块定义与加载</h2><h2 id="git初始化仓库"><a href="#git初始化仓库" class="headerlink" title="git初始化仓库"></a>git初始化仓库</h2><h2 id="完善登录功能"><a href="#完善登录功能" class="headerlink" title="完善登录功能"></a>完善登录功能</h2><h2 id="模块化重构登录功能"><a href="#模块化重构登录功能" class="headerlink" title="模块化重构登录功能"></a>模块化重构登录功能</h2>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;Session-And-Cookie&quot;&gt;&lt;a href=&quot;#Session-And-Cookie&quot; class=&quot;headerlink&quot; title=&quot;Session And Cookie&quot;&gt;&lt;/a&gt;Session And Cookie&lt;/h1&gt;&lt;h2 id=&quot;s
-      
-    
-    </summary>
-    
-    
-      <category term="语法" scheme="http://spzhanqi.top/tags/%E8%AF%AD%E6%B3%95/"/>
-    
-      <category term="git" scheme="http://spzhanqi.top/tags/git/"/>
-    
-  </entry>
-  
-  <entry>
     <title>git 相关四 / 远程仓库相关</title>
     <link href="http://spzhanqi.top/2018/07/22/180722git4/"/>
     <id>http://spzhanqi.top/2018/07/22/180722git4/</id>
@@ -130,6 +105,31 @@
       
       
         &lt;h1 id=&quot;git-系列四&quot;&gt;&lt;a href=&quot;#git-系列四&quot; class=&quot;headerlink&quot; title=&quot;git-系列四&quot;&gt;&lt;/a&gt;git-系列四&lt;/h1&gt;&lt;h2 id=&quot;分支&quot;&gt;&lt;a href=&quot;#分支&quot; class=&quot;headerlink&quot; title=&quot;分
+      
+    
+    </summary>
+    
+    
+      <category term="语法" scheme="http://spzhanqi.top/tags/%E8%AF%AD%E6%B3%95/"/>
+    
+      <category term="git" scheme="http://spzhanqi.top/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>session and cookie</title>
+    <link href="http://spzhanqi.top/2018/07/22/180722session&amp;&amp;cookie/"/>
+    <id>http://spzhanqi.top/2018/07/22/180722session&amp;&amp;cookie/</id>
+    <published>2018-07-22T09:03:38.000Z</published>
+    <updated>2018-07-22T09:35:56.691Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Session-And-Cookie"><a href="#Session-And-Cookie" class="headerlink" title="Session And Cookie"></a>Session And Cookie</h1><h2 id="session和cookie分析"><a href="#session和cookie分析" class="headerlink" title="session和cookie分析"></a>session和cookie分析</h2><ul><li>http协议是无状态的</li><li>但是实际情况我们需要维护客户端和服务器之间的状态</li><li>可以通过cookie和session解决这个问题</li></ul><h3 id="cookie基本操作"><a href="#cookie基本操作" class="headerlink" title="cookie基本操作"></a>cookie基本操作</h3><ul><li>获取cookie</li><li>设置cookie</li><li>cookie分类<ul><li>会话cookie</li><li>持久cookie</li></ul></li><li>cookie常用属性<ul><li>expires 有效期</li><li>path cookie路径</li></ul></li><li>封装cookie操作方式<ul><li>设置cookie</li><li>获取cookie</li></ul></li><li>使用jQuery插件操作cookie<ul><li>获取所有cookie</li><li>获取指定cookie</li><li>设置cookie</li><li>删除cookie5</li></ul></li></ul><h3 id="session操作"><a href="#session操作" class="headerlink" title="session操作"></a>session操作</h3><ul><li>session是服务器端技术</li><li>session在开启的时候会生成一个唯一编号PHPSESSID</li><li>session里面可以存储数据（这些数据与PHPSESSID相关联）</li></ul><h3 id="cookie与session的关系"><a href="#cookie与session的关系" class="headerlink" title="cookie与session的关系"></a>cookie与session的关系</h3><ul><li>session可以借助cookie</li><li>但是cookie可以被浏览器禁用</li><li>可以通过别的办法解决：URL重写</li></ul><h2 id="模块化开发概念"><a href="#模块化开发概念" class="headerlink" title="模块化开发概念"></a>模块化开发概念</h2><ul><li>非模块化开发缺点<ul><li>命名冲突(EXTJS YUI EXJ.panel.abc())</li><li>文件依赖</li></ul></li><li>模板规范<ul><li>浏览器端模块化<ul><li>AMD — Require.js</li><li>CMD — Sea.js</li></ul></li><li>服务器端的模块化<ul><li>CommonJS — Node.js</li></ul></li></ul></li></ul><h2 id="requirejs基本使用"><a href="#requirejs基本使用" class="headerlink" title="requirejs基本使用"></a>requirejs基本使用</h2><h2 id="模块定义与加载"><a href="#模块定义与加载" class="headerlink" title="模块定义与加载"></a>模块定义与加载</h2><h2 id="git初始化仓库"><a href="#git初始化仓库" class="headerlink" title="git初始化仓库"></a>git初始化仓库</h2><h2 id="完善登录功能"><a href="#完善登录功能" class="headerlink" title="完善登录功能"></a>完善登录功能</h2><h2 id="模块化重构登录功能"><a href="#模块化重构登录功能" class="headerlink" title="模块化重构登录功能"></a>模块化重构登录功能</h2>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Session-And-Cookie&quot;&gt;&lt;a href=&quot;#Session-And-Cookie&quot; class=&quot;headerlink&quot; title=&quot;Session And Cookie&quot;&gt;&lt;/a&gt;Session And Cookie&lt;/h1&gt;&lt;h2 id=&quot;s
       
     
     </summary>
